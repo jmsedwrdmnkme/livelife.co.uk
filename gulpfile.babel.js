@@ -46,17 +46,7 @@ function javascript() {
   return gulp
     .src([
       'node_modules/@popperjs/core/dist/umd/popper.js',
-      'node_modules/bootstrap/js/dist/alert.js',
-      'node_modules/bootstrap/js/dist/button.js',
-      'node_modules/bootstrap/js/dist/carousel.js',
-      'node_modules/bootstrap/js/dist/collapse.js',
-      'node_modules/bootstrap/js/dist/dropdown.js',
-      'node_modules/bootstrap/js/dist/modal.js',
-      'node_modules/bootstrap/js/dist/popover.js',
-      'node_modules/bootstrap/js/dist/scrollspy.js',
-      'node_modules/bootstrap/js/dist/tab.js',
-      'node_modules/bootstrap/js/dist/toast.js',
-      'node_modules/bootstrap/js/dist/tooltip.js',
+      'node_modules/bootstrap/dist/js/bootstrap.js',
       './src/js/*/js'
     ], { allowEmpty: true })
     .pipe(
@@ -108,6 +98,15 @@ function styles() {
 //
 // Assets
 //
+
+
+function fonts() {
+  return gulp
+    .src('./src/fonts/*', { allowEmpty: true })
+    .pipe(gulp.dest('./dist/fonts/'))
+    .pipe(browsersync.stream());
+}
+
 
 function sprite() {
   return gulp
@@ -204,6 +203,7 @@ const watch =
     clean,
     gulp.parallel(
       sprite,
+      fonts,
       images,
       styles,
       javascript
@@ -229,6 +229,7 @@ function watchFiles() {
   gulp.watch('./src/scss/**/*.scss', csswatch);
   gulp.watch('./src/js/**/*.js', jswatch);
   gulp.watch('./src/mustache/**/*.mustache', html);
+  gulp.watch('./src/fonts/*', sprite);
   gulp.watch('./src/sprite/**/*', sprite);
   gulp.watch('./src/img/**/*', images);
 }
