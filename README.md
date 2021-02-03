@@ -10,7 +10,7 @@ Will play nice with the latest versions of modern browsers:-
 
 ## Get started
 * git clone https://git.jamesmonk.me/James/livelife.co.uk.git
-* cd front-end-boilerplate
+* cd livelife.co.uk
 * npm install --save-dev
 * gulp
 * Start building using files located within /src!
