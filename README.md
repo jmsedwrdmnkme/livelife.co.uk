@@ -1,5 +1,5 @@
 # LiveLife
-Front-end development build for livelife.co.uk, utilising Bootstrap v5
+Front-end development build for livelife.co.uk, utilising Bootstrap v5, importable to Oracle CE as both Template and Theme.
 
 Will play nice with the latest versions of modern browsers:-
 * IE11 (not officially supported, should be A-OK, however)
@@ -9,7 +9,7 @@ Will play nice with the latest versions of modern browsers:-
 * Safari
 
 ## Get started
-* git clone https://git.jamesmonk.me/James/livelife.co.uk.git
+* git clone https://git.jamesmonk.me/james/livelife.co.uk.git
 * cd livelife.co.uk
 * npm install --save-dev
 * gulp
@@ -28,6 +28,7 @@ Will play nice with the latest versions of modern browsers:-
 
 ### Assets
 * Bootstrap v5 HTML utilisation
+* Locally hosted fonts for speed and greater control/privacy
 * Mustache HTML templating process (featuring partials)
 * Imagemin IMG process (image optimisation and SVG minification)
 * SVG icon sprite (generated inline from SVG assets)

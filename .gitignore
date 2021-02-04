@@ -1,3 +1,4 @@
 node_modules/
-dist/
+dist/theme/assets/
+dist/theme/layouts/
 package-lock.json

@@ -19,7 +19,6 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const mustache = require("gulp-mustache");
-const browsersync = require('browser-sync').create();
 
 //
 // Processes
@@ -27,7 +26,10 @@ const browsersync = require('browser-sync').create();
 
 // Clean
 function clean() {
-  return del('./dist');
+  return del([
+    './dist/theme/assets',
+    './dist/theme/layouts'
+  ]);
 }
 
 //
@@ -41,13 +43,12 @@ function javascript() {
       './gulpfile.babel.js'
     ], { allowEmpty: true })
     .pipe(jshint())
-    .pipe(jshint.reporter(stylish))
-    .pipe(browsersync.stream());
+    .pipe(jshint.reporter(stylish));
   return gulp
     .src([
       'node_modules/@popperjs/core/dist/umd/popper.js',
       'node_modules/bootstrap/dist/js/bootstrap.js',
-      './src/js/*.js'
+      './src/js/scripts.js'
     ], { allowEmpty: true })
     .pipe(
       babel({
@@ -68,8 +69,7 @@ function javascript() {
       }}
     ))
     .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('./dist/js/'))
-    .pipe(browsersync.stream());
+    .pipe(gulp.dest('./dist/theme/assets/js/'));
 }
 
 
@@ -82,16 +82,14 @@ function styles() {
     .src('./src/scss/*.scss', { allowEmpty: true })
     .pipe(sasslint({'configFile': './.sass-lint.yml'}))
     .pipe(sasslint.format())
-    .pipe(sasslint.failOnError())
-    .pipe(browsersync.stream());
+    .pipe(sasslint.failOnError());
   return gulp
     .src('./src/scss/styles.scss', { allowEmpty: true })
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer())
     .pipe(cleanCSS())
-    .pipe(concat('styles.css'))
-    .pipe(gulp.dest('./dist/css/'))
-    .pipe(browsersync.stream());
+    .pipe(concat('main.css'))
+    .pipe(gulp.dest('./dist/theme/assets/css/'));
 }
 
 
@@ -103,8 +101,7 @@ function styles() {
 function fonts() {
   return gulp
     .src('./src/fonts/*', { allowEmpty: true })
-    .pipe(gulp.dest('./dist/fonts/'))
-    .pipe(browsersync.stream());
+    .pipe(gulp.dest('./dist/theme/assets/fonts/'));
 }
 
 
@@ -130,8 +127,7 @@ function sprite() {
       })
     )
     .pipe(concat('sprite.mustache'))
-    .pipe(gulp.dest('./src/mustache/partials/'))
-    .pipe(browsersync.stream());
+    .pipe(gulp.dest('./src/mustache/partials/'));
 }
 
 
@@ -153,8 +149,7 @@ function images() {
         })
       ])
     )
-    .pipe(gulp.dest('./dist/img/'))
-    .pipe(browsersync.stream());
+    .pipe(gulp.dest('./dist/theme/assets/img/'));
 }
 
 
@@ -168,29 +163,7 @@ function html() {
     .src('./src/mustache/*.mustache', { allowEmpty: true })
     .pipe(mustache())
     .pipe(ext('.html'))
-    .pipe(gulp.dest('./dist/'))
-    .pipe(browsersync.stream());
-}
-
-
-//
-// Testing environment
-//
-
-// BrowserSync
-function browserSync(done) {
-  browsersync.init({
-    server: {
-      baseDir: "./dist"
-    },
-    port: 3000
-  });
-  done();
-}
-
-function browserSyncReload(done) {
-  browsersync.reload();
-  done();
+    .pipe(gulp.dest('./dist/theme/layouts/'));
 }
 
 
@@ -209,7 +182,6 @@ const watch =
       javascript
     ),
     html,
-    browserSync,
     watchFiles
   );
 

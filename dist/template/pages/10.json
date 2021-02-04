@@ -1,0 +1,78 @@
+{
+  "properties": {
+    "title": null,
+    "pageLayout": "index.html",
+    "pageDescription": null,
+    "keywords": null,
+    "hideFromSearchEngines": false,
+    "header": "",
+    "footer": "",
+    "noIndex": false,
+    "noFollow": false,
+    "noArchive": false,
+    "noSnippet": false
+  },
+  "slots": {
+    "slot-content": {
+      "components": [
+        "81e3252e-0bc8-4d6f-a8f7-00c4a392ddb8",
+        "5a5dd154-e7cd-4d36-a2ee-8e1bd1cdce9a"
+      ],
+      "grid": "<div class=\"scs-row\"><div class=\"scs-col\" style=\"width: 100%;\"><div id=\"81e3252e-0bc8-4d6f-a8f7-00c4a392ddb8\"><\/div><div id=\"5a5dd154-e7cd-4d36-a2ee-8e1bd1cdce9a\"><\/div><\/div><\/div>"
+    }
+  },
+  "componentInstances": {
+    "81e3252e-0bc8-4d6f-a8f7-00c4a392ddb8": {
+      "type": "scs-title",
+      "id": "scs-title",
+      "data": {
+        "actions": "",
+        "alignment": "fill",
+        "backgroundColor": "",
+        "borderColor": "#808080",
+        "borderRadius": 0,
+        "borderStyle": "none",
+        "borderWidth": 1,
+        "fontColor": "#333333",
+        "fontFamily": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "fontSize": 24,
+        "marginBottom": 5,
+        "marginLeft": 5,
+        "marginRight": 5,
+        "marginTop": 5,
+        "placeholderText": "",
+        "styleClass": "",
+        "useStyleClass": "true",
+        "userText": "<div>Welcome!<\/div>",
+        "visible": true,
+        "width": 400
+      }
+    },
+    "5a5dd154-e7cd-4d36-a2ee-8e1bd1cdce9a": {
+      "type": "scs-paragraph",
+      "id": "scs-paragraph",
+      "data": {
+        "actions": "",
+        "alignment": "fill",
+        "backgroundColor": "",
+        "borderColor": "#808080",
+        "borderRadius": 0,
+        "borderStyle": "none",
+        "borderWidth": 1,
+        "fontColor": "#333333",
+        "fontFamily": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "fontSize": 16,
+        "marginBottom": 5,
+        "marginLeft": 5,
+        "marginRight": 5,
+        "marginTop": 5,
+        "placeholderText": "",
+        "styleClass": "",
+        "useStyleClass": "true",
+        "userText": "<div>The starter template provides simplified versions of a theme, site navigation, and a default site so you can more easily modify it to create your own template.<\/div><div>&nbsp;<\/div><div>Explore the pages in this site to learn more about developing the different parts of a template. To view a particular page:<\/div><ul><li>Use the site navigation at the top of each page to go to a selected page.<\/li><li>Click <strong>Edit <\/strong>and then click the <strong>Pages <\/strong>icon in the left panel to use the site tree to go to a selected page.<\/li><\/ul><div>To remove the documentation pages from this site, click the Developing Templates page in the site tree in the left panel and click the <strong>Delete <\/strong>icon. The Developing Templates page and all<br \/>nested pages are deleted.<\/div><div>&nbsp;<\/div><div>For more information about developing templates, see <a linktype=\"scs-link-webpage\" target=\"_blank\" href=\"http:\/\/www.oracle.com\/pls\/topic\/lookup?ctx=cloud&amp;id=sitescsdev_templates\">Developing Templates<\/a> in <em>Developing for Oracle Sites Cloud Service<\/em>.<\/div>",
+        "visible": true,
+        "width": 400
+      }
+    }
+  }
+}
