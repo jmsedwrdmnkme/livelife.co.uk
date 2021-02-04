@@ -1,0 +1,7 @@
+.position {
+  @include media-breakpoint-up(lg) {
+    &-lg-static {
+      position: static !important;
+    }
+  }
+}

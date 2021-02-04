@@ -1,65 +1,69 @@
-// // Variables
-// //
-// // Variables should follow the `$component-state-property-size` formula for
-// // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+// Variables
 //
-// // Color system
-//
-// $white:    #fff !default;
-// $gray-100: #f8f9fa !default;
-// $gray-200: #e9ecef !default;
-// $gray-300: #dee2e6 !default;
-// $gray-400: #ced4da !default;
-// $gray-500: #adb5bd !default;
-// $gray-600: #6c757d !default;
-// $gray-700: #495057 !default;
-// $gray-800: #343a40 !default;
-// $gray-900: #212529 !default;
-// $black:    #000 !default;
-//
-// // fusv-disable
-// $grays: (
-//   "100": $gray-100,
-//   "200": $gray-200,
-//   "300": $gray-300,
-//   "400": $gray-400,
-//   "500": $gray-500,
-//   "600": $gray-600,
-//   "700": $gray-700,
-//   "800": $gray-800,
-//   "900": $gray-900
-// ) !default;
-// // fusv-enable
-//
-// $blue:    #0d6efd !default;
-// $indigo:  #6610f2 !default;
-$purple:  #6E72BB !default;
-// $pink:    #d63384 !default;
-// $red:     #dc3545 !default;
-// $orange:  #fd7e14 !default;
-// $yellow:  #ffc107 !default;
-// $green:   #198754 !default;
-// $teal:    #20c997 !default;
-// $cyan:    #0dcaf0 !default;
-//
-// // scss-docs-start colors-map
-// $colors: (
-//   "blue":       $blue,
-//   "indigo":     $indigo,
-//   "purple":     $purple,
-//   "pink":       $pink,
-//   "red":        $red,
-//   "orange":     $orange,
-//   "yellow":     $yellow,
-//   "green":      $green,
-//   "teal":       $teal,
-//   "cyan":       $cyan,
-//   "white":      $white,
-//   "gray":       $gray-600,
-//   "gray-dark":  $gray-800
-// ) !default;
-// // scss-docs-end colors-map
-//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+// fusv-disable
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+) !default;
+// fusv-enable
+
+$blue:         #0d6efd !default;
+$indigo:       #6610f2 !default;
+$purple:       #6E72BB !default;
+$purplelight:  #F5F6FE !default;
+$pink:         #d63384 !default;
+$red:          #dc3545 !default;
+$orange:       #fd7e14 !default;
+$yellow:       #ffc107 !default;
+$green:        #198754 !default;
+$greenlight:   #EBF6F3 !default;
+$teal:         #20c997 !default;
+$cyan:         #0dcaf0 !default;
+
+// scss-docs-start colors-map
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "purplelight":$purplelight,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "greenlight": $greenlight,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+) !default;
+// scss-docs-end colors-map
+
 $primary:       $purple !default;
 // $secondary:     $gray-600 !default;
 // $success:       $green !default;
@@ -201,10 +205,10 @@ $primary:       $purple !default;
 //   (")", "%29"),
 // ) !default;
 //
-// // Options
-// //
-// // Quickly modify global styling by enabling or disabling optional features.
+// Options
 //
+// Quickly modify global styling by enabling or disabling optional features.
+
 // $enable-caret:                true !default;
 // $enable-rounded:              true !default;
 // $enable-shadows:              false !default;
@@ -216,7 +220,7 @@ $primary:       $purple !default;
 // $enable-button-pointers:      true !default;
 // $enable-rfs:                  true !default;
 // $enable-validation-icons:     true !default;
-// $enable-negative-margins:     false !default;
+$enable-negative-margins:     true !default;
 // $enable-deprecation-messages: true !default;
 // $enable-important-utilities:  true !default;
 //
@@ -409,8 +413,8 @@ $font-size-base:              0.9375rem !default; // 15px
 // $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 // $font-weight-normal:          400 !default;
-$font-weight-bold:            800 !default;
-// $font-weight-bolder:          bolder !default;
+$font-weight-bold:            600 !default;
+$font-weight-bolder:          800 !default;
 //
 $font-weight-base:            $font-weight-light !default;
 //
@@ -842,9 +846,9 @@ $h3-font-size:                $font-size-base * 1.333 !default; // 20px
 // $zindex-tooltip:                    1070 !default;
 // // scss-docs-end zindex-stack
 //
-//
-// // Navs
-//
+
+// Navs
+
 // $nav-link-padding-y:                .5rem !default;
 // $nav-link-padding-x:                1rem !default;
 // $nav-link-font-size:                null !default;
@@ -872,7 +876,7 @@ $h3-font-size:                $font-size-base * 1.333 !default; // 20px
 // $navbar-padding-y:                  $spacer / 2 !default;
 // $navbar-padding-x:                  null !default;
 //
-// $navbar-nav-link-padding-x:         .5rem !default;
+$navbar-nav-link-padding-x:         2vw !default;
 //
 // $navbar-brand-font-size:            $font-size-lg !default;
 // // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -896,8 +900,8 @@ $h3-font-size:                $font-size-base * 1.333 !default; // 20px
 // $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 //
 // $navbar-light-color:                rgba($black, .55) !default;
-// $navbar-light-hover-color:          rgba($black, .7) !default;
-// $navbar-light-active-color:         rgba($black, .9) !default;
+$navbar-light-hover-color:          $purple !default;
+$navbar-light-active-color:         $purple !default;
 // $navbar-light-disabled-color:       rgba($black, .3) !default;
 // $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 // $navbar-light-toggler-border-color: rgba($black, .1) !default;

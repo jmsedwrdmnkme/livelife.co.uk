@@ -1,0 +1,107 @@
+@include media-breakpoint-down(md) {
+  .navbar-brand {
+    img {
+      height: 1.25rem;
+      width: 5.7rem;
+    }
+  }
+
+  .navbar {
+    &::before {
+      content: '';
+      transition: background-color 0.3s;
+    }
+
+    &.active {
+      &::before {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        width: 100vw;
+      }
+    }
+  }
+
+  .navbar-nav {
+    padding-top: 3.6rem;
+  }
+
+  .navbar-toggler {
+    z-index: $zindex-tooltip;
+  }
+
+  .navbar-toggler-icon {
+    &:not(.active) {
+      color: transparent;
+    }
+
+    &.active {
+      background-image: none !important;
+    }
+
+    .close {
+      font-size: 2.5rem;
+      line-height: 1.65rem;
+    }
+  }
+
+  .offcanvas-collapse {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 66.666% !important;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: $purplelight;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    z-index: $zindex-popover;
+
+    &.open {
+      visibility: visible;
+      transform: translateX(-100%);
+    }
+  }
+
+  .nav-item {
+    margin-bottom: 0.25rem;
+  }
+}
+
+header {
+  .nav-link {
+    font-weight: 600;
+
+    @include media-breakpoint-down(md) {
+      display: flex !important;
+      padding: .35rem 0.5rem .35rem 1rem !important;
+      color: $black !important;
+
+      &::after {
+        flex-shrink: 0;
+        width: 0.75rem;
+        height: 0.75rem;
+        margin-left: auto;
+        content: '';
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-size: 0.75rem;
+        transform: rotate(-90deg);
+        margin-top: 0.3rem;
+      }
+
+      &.active {
+        background-color: $purplelight;
+        border-radius: 2px;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 0.8rem;
+    }
+  }
+}

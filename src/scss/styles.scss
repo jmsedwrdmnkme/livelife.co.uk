@@ -4,7 +4,6 @@
 @import '../../node_modules/bootstrap/scss/variables';
 @import '../../node_modules/bootstrap/scss/mixins';
 @import '../../node_modules/bootstrap/scss/utilities';
-@import 'partials/fonts';
 
 // Layout & components
 @import '../../node_modules/bootstrap/scss/root';
@@ -42,3 +41,11 @@
 
 // Utilities
 @import '../../node_modules/bootstrap/scss/utilities/api';
+
+// Theme
+@import 'partials/fonts';
+@import 'partials/btn';
+@import 'partials/nav';
+@import 'partials/sprite';
+@import 'partials/position';
+@import 'partials/footer';

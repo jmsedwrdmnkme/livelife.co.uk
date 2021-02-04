@@ -37,7 +37,7 @@ function clean() {
 function javascript() {
   gulp
     .src([
-      './src/js/*/js',
+      './src/js/scripts.js',
       './gulpfile.babel.js'
     ], { allowEmpty: true })
     .pipe(jshint())
@@ -47,7 +47,7 @@ function javascript() {
     .src([
       'node_modules/@popperjs/core/dist/umd/popper.js',
       'node_modules/bootstrap/dist/js/bootstrap.js',
-      './src/js/*/js'
+      './src/js/*.js'
     ], { allowEmpty: true })
     .pipe(
       babel({

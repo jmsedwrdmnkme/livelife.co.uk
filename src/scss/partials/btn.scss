@@ -1,0 +1,8 @@
+.btn {
+  &[class*=-primary] {
+    &:hover,
+    &.active {
+      color: $white;
+    }
+  }
+}
