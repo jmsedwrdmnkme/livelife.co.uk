@@ -1,4 +1,4 @@
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
   .navbar-brand {
     img {
       height: 1.25rem;
@@ -76,7 +76,7 @@ header {
   .nav-link {
     font-weight: 600;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       display: flex !important;
       padding: .35rem 0.5rem .35rem 1rem !important;
       color: $black !important;
@@ -95,13 +95,21 @@ header {
       }
 
       &.active {
-        background-color: $purplelight;
+        background-color: $purplemid;
         border-radius: 2px;
       }
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       font-size: 0.8rem;
+
+      &[href*='index.html'] {
+        display: none;
+      }
+
+      &.active {
+        font-weight: 800;
+      }
     }
   }
 }

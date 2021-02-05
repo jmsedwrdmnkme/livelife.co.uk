@@ -56,17 +56,30 @@ function renderNav() {
     renderNode(SCS.navigationRoot, navBar);
     topnav.appendChild(navBar);
 
-    document.querySelector('#mainNav > ul').classList.add('navbar-nav');
+    // Append correct bootstrap styling to main nav ul
+    navBar.classList.add('navbar-nav');
 
+    // Append correct bootstrap styling to nav li
     var navItems = document.querySelectorAll('#mainNav li');
     navItems.forEach(function (item, index) {
       item.classList.add('nav-item');
     });
 
+    // Append correct bootstrap styling to nav a
     var navLinks = document.querySelectorAll('#mainNav a');
     navLinks.forEach(function (link, index) {
       link.classList.add('nav-link');
     });
+
+    // Grab and append Home child nav nodes to the top level
+    const childUl = document.querySelector('#mainNav > ul > li > ul');
+    const childNodes = document.querySelectorAll('#mainNav > ul > li > ul > li');
+    const childHtml = childNodes.innerHTML;
+    childUl.remove();
+
+    for (let i = 0; i <= childNodes.length - 1; i++) {
+      navBar.appendChild(childNodes[i]);
+    }
   }
 }
 
@@ -81,3 +94,17 @@ if (document.addEventListener) {
     }
   });
 }
+
+// Nav active class
+window.onload = function() { 
+  var all_links = document.querySelectorAll('.nav-link'),
+    i=0, len=all_links.length,
+    full_path = location.href.split('#')[0]; // Ignore hashes
+
+  // Loop through each link.
+  for(; i<len; i++) {
+    if(all_links[i].href.split("#")[0] == full_path) {
+      all_links[i].className += " active";
+    }
+  }
+};

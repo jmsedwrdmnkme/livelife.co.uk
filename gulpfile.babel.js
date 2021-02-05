@@ -185,23 +185,17 @@ const watch =
     watchFiles
   );
 
-const csswatch =
+const spritewatch =
   gulp.series(
-    styles,
-    html
-  );
-
-const jswatch =
-  gulp.series(
-    javascript,
+    sprite,
     html
   );
 
 function watchFiles() {
-  gulp.watch('./src/scss/**/*.scss', csswatch);
-  gulp.watch('./src/js/**/*.js', jswatch);
+  gulp.watch('./src/scss/**/*.scss', styles);
+  gulp.watch('./src/js/**/*.js', javascript);
   gulp.watch('./src/mustache/**/*.mustache', html);
-  gulp.watch('./src/fonts/*', sprite);
+  gulp.watch('./src/fonts/*', spritewatch);
   gulp.watch('./src/sprite/**/*', sprite);
   gulp.watch('./src/img/**/*', images);
 }

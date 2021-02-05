@@ -34,6 +34,7 @@ $grays: (
 $blue:         #0d6efd !default;
 $indigo:       #6610f2 !default;
 $purple:       #6E72BB !default;
+$purplemid:    #C9CCF5 !default;
 $purplelight:  #F5F6FE !default;
 $pink:         #d63384 !default;
 $red:          #dc3545 !default;
@@ -49,6 +50,7 @@ $colors: (
   "blue":       $blue,
   "indigo":     $indigo,
   "purple":     $purple,
+  "purplemid":  $purplemid,
   "purplelight":$purplelight,
   "pink":       $pink,
   "red":        $red,
@@ -215,7 +217,7 @@ $primary:       $purple !default;
 // $enable-gradients:            false !default;
 // $enable-transitions:          true !default;
 // $enable-reduced-motion:       true !default;
-// $enable-smooth-scroll:        true !default;
+$enable-smooth-scroll:        true !default;
 // $enable-grid-classes:         true !default;
 // $enable-button-pointers:      true !default;
 // $enable-rfs:                  true !default;
@@ -300,8 +302,8 @@ $enable-negative-margins:     true !default;
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
+  //sm: 576px,
+  //md: 768px,
   lg: 1024px//,
   //xl: 1200px,
   //xxl: 1400px
@@ -318,9 +320,9 @@ $grid-breakpoints: (
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-  sm: 540px,
-  md: 680px,
-  lg: 715px//,
+  //sm: 540px,
+  //md: 680px,
+  lg: 960px,
   //xl: 1140px,
   //xxl: 1320px
 ) !default;
@@ -876,7 +878,7 @@ $h3-font-size:                $font-size-base * 1.333 !default; // 20px
 // $navbar-padding-y:                  $spacer / 2 !default;
 // $navbar-padding-x:                  null !default;
 //
-$navbar-nav-link-padding-x:         2vw !default;
+$navbar-nav-link-padding-x:         1.275rem !default;
 //
 // $navbar-brand-font-size:            $font-size-lg !default;
 // // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -901,7 +903,7 @@ $navbar-nav-link-padding-x:         2vw !default;
 //
 // $navbar-light-color:                rgba($black, .55) !default;
 $navbar-light-hover-color:          $purple !default;
-$navbar-light-active-color:         $purple !default;
+$navbar-light-active-color:         $black !default;
 // $navbar-light-disabled-color:       rgba($black, .3) !default;
 // $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 // $navbar-light-toggler-border-color: rgba($black, .1) !default;

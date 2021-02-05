@@ -1,0 +1,4 @@
+// Function to return value of container-max-width map values
+@function get-breakpoints($key: "lg") {
+  @return map-get($container-max-widths, $key);
+}
