@@ -1,18 +1,5 @@
 //
-// Bootstrap offcanvas navbar slide in for mobile
-//
-(function () {
-  'use strict';
-
-  document.querySelector('[data-bs-toggle="offcanvas"]').addEventListener('click', function () {
-    document.querySelector('.offcanvas-collapse').classList.toggle('open');
-    document.querySelector('.navbar-toggler-icon').classList.toggle('active');
-    document.querySelector('.navbar').classList.toggle('active');
-  });
-})();
-
-//
-// Populating the main navigation Oracle CEC method
+// Navigation elements - main and footer
 //
 function renderNode(id, navBar) {
   if (id >= 0) {
@@ -50,6 +37,7 @@ function renderNode(id, navBar) {
 
 function renderNav() {
   var topnav = document.getElementById("mainNav");
+  var footernav = document.getElementById("footerNav");
 
   if (topnav) {
     var navBar = document.createElement("ul");
@@ -72,14 +60,21 @@ function renderNav() {
     });
 
     // Grab and append Home child nav nodes to the top level
-    const childUl = document.querySelector('#mainNav > ul > li > ul');
-    const childNodes = document.querySelectorAll('#mainNav > ul > li > ul > li');
-    const childHtml = childNodes.innerHTML;
-    childUl.remove();
+    var childNodes = document.querySelectorAll('#mainNav > ul > li > ul > li');
+    var childHtml = childNodes.innerHTML;
 
     for (let i = 0; i <= childNodes.length - 1; i++) {
       navBar.appendChild(childNodes[i]);
     }
+
+    // Cloning main navigation items to footer nav
+    var navNodes = document.querySelectorAll('#mainNav > ul > li');
+    for (let i = 0; i <= navNodes.length - 1; i++) {
+      footernav.appendChild(navNodes[i].cloneNode(true));
+    }
+
+    // Appending button style to final nav item in main nav
+    navNodes[navNodes.length- 1].querySelector('a').classList.add('btn', 'btn-outline-primary');
   }
 }
 
@@ -95,7 +90,18 @@ if (document.addEventListener) {
   });
 }
 
-// Nav active class
+// Bootstrap offcanvas navbar slide in for mobile
+(function () {
+  'use strict';
+
+  document.querySelector('[data-bs-toggle="offcanvas"]').addEventListener('click', function () {
+    document.querySelector('.offcanvas-collapse').classList.toggle('open');
+    document.querySelector('.navbar-toggler-icon').classList.toggle('active');
+    document.querySelector('.navbar').classList.toggle('active');
+  });
+})();
+
+// Nav active class based on page URL
 window.onload = function() { 
   var all_links = document.querySelectorAll('.nav-link'),
     i=0, len=all_links.length,

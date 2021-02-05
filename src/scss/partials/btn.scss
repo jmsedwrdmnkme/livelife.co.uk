@@ -1,8 +1,20 @@
 .btn {
-  &[class*=-primary] {
+  &-primary {
+    color: $white !important;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
     &:hover,
     &.active {
-      color: $white;
+      background-color: $black;
+    }
+  }
+
+  &-outline-primary {
+    color: $primary !important;
+
+    &:hover,
+    &.active {
+      color: $white !important;
     }
   }
 }

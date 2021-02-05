@@ -1,0 +1,8 @@
+// Styling applied when editing page within Oracle CE
+.scs-edit-mode {
+  header {
+    &.sticky-top {
+      position: static !important;
+    }
+  }
+}

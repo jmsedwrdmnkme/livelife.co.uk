@@ -1,3 +1,14 @@
 footer {
   background-color: $greenlight;
+
+  a {
+    color: $black;
+
+    &.nav-link {
+      &.active,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
