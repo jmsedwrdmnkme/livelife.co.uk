@@ -1,0 +1,11 @@
+a {
+  img {
+    transition: opacity 0.2s;
+  }
+
+  &:hover {
+    img {
+      opacity: 0.5;
+    }
+  }
+}

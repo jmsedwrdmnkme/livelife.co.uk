@@ -1,7 +1,20 @@
+main {
+  overflow: hidden;
+}
+
 .container {
   max-width: get-breakpoints(lg);
+
+  main > & {
+    @include media-breakpoint-down(lg) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
 }
 
 .container-breakout {
-  margin: 0 calc(-50vw + 50%);
+  @include media-breakpoint-up(lg) {
+    margin: 0 calc(-50vw + 50%);
+  }
 }

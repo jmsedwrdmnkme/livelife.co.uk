@@ -1,9 +1,6 @@
-.scs-title {
-  .scs-title-text {
-    overflow: hidden !important;
-    font-size: $h1-font-size;
-    line-height: $headings-line-height;
-    font-weight: 800;
+.scs-paragraph {
+  .scs-paragraph-text {
+    margin-top: 1rem;
 
     // Fixes for inheriting container styles
     .text-center & div {
@@ -15,10 +12,5 @@
         text-align: left !important;
       }
     }
-  }
-
-  strong,
-  b {
-    color: $orange;
   }
 }

@@ -17,4 +17,10 @@
       color: $white !important;
     }
   }
+
+  @include media-breakpoint-up(lg) {
+    &-lead {
+      font-size: 1.2rem;
+    }
+  }
 }

@@ -1,0 +1,8 @@
+@media (min-width: 1024px) {
+  .how-it-works-nav .container {
+    background-image: url("data:image/svg+xml,%3Csvg width='960' height='108' viewBox='0 0 960 108' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 41.0006C1 41.0006 77.4573 85.7485 130.162 81.7807C175.989 78.3306 229.941 22.4642 267.893 22.4642C351.456 22.4642 414.807 117.143 482.755 105.878C550.702 94.6129 567.842 46.5615 613.141 41.0006C658.439 35.4397 699.226 83.019 744.751 100.317C824.929 130.783 904.073 49.8017 959 0.838379' stroke='%23191A44' stroke-opacity='0.34' stroke-width='0.995502' stroke-linecap='round' stroke-dasharray='4.98 4.98'/%3E%3C/svg%3E");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 70%;
+  }
+}

@@ -6,21 +6,42 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
   // ----------------------------------------------
   var sampleComponentTemplate =
     '<!-- ko if: initialized -->' +
-    '<div class="container-breakout py-4 position-relative how-it-works-hero">' +
+    '<div class="container-breakout pt-4 pb-5 position-relative how-it-works-nav bg-purplelight">' +
     '  <div class="container position-relative">' +
-    '    <div class="row justify-content-between">' +
-    '      <div class="col-lg-5 mw-sm d-none d-lg-block">' +
-    '        <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId\', \'data\': imageData } }"></scs-image>' +
+    '    <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId\', \'data\': titleData } }"></scs-title>' +
+    '    <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId\', \'data\': paragraphData } }"></scs-paragraph>' +
+    '    <div class="row justify-content-between px-4 px-lg-0">' +
+    '      <div class="col-6 col-lg-3 d-flex">' +
+    '        <a href="#step-one" class="card w-100 p-3 my-3 mx-lg-3 text-center text-decoration-none text-dark">' +
+    '          <div class="col-10 col-lg-8 mx-auto">' +
+    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData } }"></scs-image>' +
+    '          </div>' +
+    '          <span class="mt-2">1. Online self-assessment</span>' +
+    '        </a>' +
     '      </div>' +
-    '      <div class="col-lg-7 mt-lg-4 pt-lg-2 text-center text-lg-start">' +
-    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId\', \'data\': titleData } }"></scs-title>' +
-    '        <div class="mw-sm d-lg-none my-4 mx-auto">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId\', \'data\': imageData } }"></scs-image>' +
-    '        </div>' +
-    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '        <!-- ko if: linkText -->' +
-    '          <a data-bind="attr: { href: linkURL}" class="btn btn-lead btn-primary mt-4"><span data-bind="text: linkText"></span></a>'  +
-    '        <!-- /ko -->' +
+    '      <div class="col-6 col-lg-3 d-flex">' +
+    '        <a href="#step-two" class="card w-100 p-3 my-3 mx-lg-3 text-center text-decoration-none text-dark">' +
+    '          <div class="col-10 col-lg-8 mx-auto">' +
+    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData } }"></scs-image>' +
+    '          </div>' +
+    '          <span class="mt-2">2. Book a consultation</span>' +
+    '        </a>' +
+    '      </div>' +
+    '      <div class="col-6 col-lg-3 d-flex">' +
+    '        <a href="#step-three" class="card w-100 p-3 my-3 mx-lg-3 text-center text-decoration-none text-dark">' +
+    '          <div class="col-10 col-lg-8 mx-auto">' +
+    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId3\', \'data\': imageData } }"></scs-image>' +
+    '          </div>' +
+    '          <span class="mt-2">3. Talk with a therapist</span>' +
+    '        </a>' +
+    '      </div>' +
+    '      <div class="col-6 col-lg-3 d-flex">' +
+    '        <a href="#step-four" class="card w-100 p-3 my-3 mx-lg-3 text-center text-decoration-none text-dark">' +
+    '          <div class="col-10 col-lg-8 mx-auto">' +
+    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId4\', \'data\': imageData } }"></scs-image>' +
+    '          </div>' +
+    '          <span class="mt-2">4. Start receiving therapy</span>' +
+    '        </a>' +
     '      </div>' +
     '    </div>' +
     '  </div>' +

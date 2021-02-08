@@ -1,0 +1,25 @@
+.how-it-works-hero {
+  background-image: url("data:image/svg+xml,%3Csvg width='1024' height='117' viewBox='0 0 1024 117' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0C0 0 67.159 84.2655 155.5 93.1316C239.185 101.53 333.387 58.5923 417.5 56.3565C542.48 53.0345 598.704 131.575 722 111.758C797.682 99.5938 821.698 41.5496 897.5 30.0887C943.208 23.1778 1024 49.1926 1024 49.1926V117H0V0Z' fill='%23F5F6FE'/%3E%3C/svg%3E");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+@media (max-width: 1023.98px) {
+  .how-it-works-hero::before {
+    content: '';
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #F5F6FE;
+    height: calc(50% + -5vw);
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .how-it-works-hero {
+    background-position: 50% 100%;
+    padding-bottom: 6rem !important;
+  }
+}

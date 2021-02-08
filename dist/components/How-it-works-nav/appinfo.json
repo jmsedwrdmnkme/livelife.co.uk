@@ -14,16 +14,40 @@
     }],
   },
   "initialData": {
-    "componentId": "how-it-works-hero",
+    "componentId": "how-it-works-nav",
     "componentLayout": "default",
-    "customSettingsData": {
-      "linkURL": "https://docs.oracle.com/pls/topic/lookup?ctx=cloud&id=CECCE-GUID-D655DF5D-4A93-4FD3-B1BB-04EC0D0B8312",
-      "nls": {
-        "linkText": "More..."
-      }
-    },
     "nestedComponents": [{
-      "id": "imageId",
+      "id": "imageId1",
+      "type": "scs-image",
+      "data": {
+        "imageUrl": "[!--$SCS_DIST_FOLDER--]/renderer/app/sdk/images/sample-image.png",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0
+      }
+    }, {
+      "id": "imageId2",
+      "type": "scs-image",
+      "data": {
+        "imageUrl": "[!--$SCS_DIST_FOLDER--]/renderer/app/sdk/images/sample-image.png",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0
+      }
+    }, {
+      "id": "imageId3",
+      "type": "scs-image",
+      "data": {
+        "imageUrl": "[!--$SCS_DIST_FOLDER--]/renderer/app/sdk/images/sample-image.png",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0
+      }
+    }, {
+      "id": "imageId4",
       "type": "scs-image",
       "data": {
         "imageUrl": "[!--$SCS_DIST_FOLDER--]/renderer/app/sdk/images/sample-image.png",
@@ -53,6 +77,7 @@
       "marginLeft": 0,
       "marginRight": 0,
       "marginTop": 0
+
     }
     }]
   }

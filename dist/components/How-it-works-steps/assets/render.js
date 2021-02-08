@@ -6,21 +6,53 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
   // ----------------------------------------------
   var sampleComponentTemplate =
     '<!-- ko if: initialized -->' +
-    '<div class="container-breakout py-4 position-relative how-it-works-hero">' +
+    '<div class="container-breakout py-4 position-relative how-it-works-steps">' +
     '  <div class="container position-relative">' +
-    '    <div class="row justify-content-between">' +
-    '      <div class="col-lg-5 mw-sm d-none d-lg-block">' +
-    '        <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId\', \'data\': imageData } }"></scs-image>' +
+    '    <div class="row py-5" id="step-one">' +
+    '      <div class="col-lg-7 py-5">' +
+    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId1\', \'data\': titleData } }"></scs-title>' +
+    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId1\', \'data\': paragraphData } }"></scs-paragraph>' +
+    '        <a href="step-two" class="btn btn-lead btn-primary mt-4">Go to step 2</a>'  +
     '      </div>' +
-    '      <div class="col-lg-7 mt-lg-4 pt-lg-2 text-center text-lg-start">' +
-    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId\', \'data\': titleData } }"></scs-title>' +
-    '        <div class="mw-sm d-lg-none my-4 mx-auto">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId\', \'data\': imageData } }"></scs-image>' +
+    '      <div class="col">' +
+    '        <div class="mw-sm">' +
+    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData } }"></scs-image>' +
     '        </div>' +
-    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '        <!-- ko if: linkText -->' +
-    '          <a data-bind="attr: { href: linkURL}" class="btn btn-lead btn-primary mt-4"><span data-bind="text: linkText"></span></a>'  +
-    '        <!-- /ko -->' +
+    '      </div>' +
+    '    </div>' +
+    '    <div class="row py-5" id="step-two">' +
+    '      <div class="col">' +
+    '        <div class="mw-sm">' +
+    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData } }"></scs-image>' +
+    '        </div>' +
+    '      </div>' +
+    '      <div class="col-lg-7 py-5">' +
+    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId2\', \'data\': titleData } }"></scs-title>' +
+    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData } }"></scs-paragraph>' +
+    '        <a href="#step-three" class="btn btn-lead btn-primary mt-4">Go to step 3</a>'  +
+    '      </div>' +
+    '    </div>' +
+    '    <div class="row py-5" id="step-three">' +
+    '      <div class="col-lg-7 py-5">' +
+    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId3\', \'data\': titleData } }"></scs-title>' +
+    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId3\', \'data\': paragraphData } }"></scs-paragraph>' +
+    '        <a href="#step-four" class="btn btn-lead btn-primary mt-4">Go to step 4</a>'  +
+    '      </div>' +
+    '      <div class="col">' +
+    '        <div class="mw-sm">' +
+    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId3\', \'data\': imageData } }"></scs-image>' +
+    '        </div>' +
+    '      </div>' +
+    '    </div>' +
+    '    <div class="row py-5" id="step-four">' +
+    '      <div class="col">' +
+    '        <div class="mw-sm">' +
+    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId4\', \'data\': imageData } }"></scs-image>' +
+    '        </div>' +
+    '      </div>' +
+    '      <div class="col-lg-7 py-5">' +
+    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId4\', \'data\': titleData } }"></scs-title>' +
+    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId4\', \'data\': paragraphData } }"></scs-paragraph>' +
     '      </div>' +
     '    </div>' +
     '  </div>' +
