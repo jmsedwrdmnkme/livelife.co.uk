@@ -1,3 +1,15 @@
-.mw-sm {
-  max-width: get-breakpoints(sm);
+.mw {
+  &-xs {
+    max-width: get-breakpoints(xs);
+  }
+
+  &-sm {
+    max-width: get-breakpoints(sm);
+
+    @include media-breakpoint-down(lg) {
+      &-xs {
+        max-width: get-breakpoints(xs);
+      }
+    }
+  }
 }

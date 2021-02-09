@@ -1,63 +1,31 @@
 /* globals define */
-define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
-  'use strict'; // ----------------------------------------------
+define(['knockout', 'jquery', 'css!./design.css'], function (ko, $, css) {
+  'use strict';
+  // ----------------------------------------------
   // Define a Knockout Template for your component
   // ----------------------------------------------
   var sampleComponentTemplate =
     '<!-- ko if: initialized -->' +
-    '<div class="container-breakout py-4 position-relative how-it-works-steps text-center text-lg-start">' +
-    '  <div class="container position-relative my-5">' +
-    '    <div class="row" id="step-one">' +
-    '      <div class="col order-lg-1">' +
-    '        <div class="mw-sm-xs mx-auto">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData } }"></scs-image>' +
+    '<div class="container-breakout how-it-works-benefits py-5 text-center text-lg-start">' +
+    '  <div class="container my-4">' +
+    '    <div class="row align-items-center">' +
+    '      <div class="col-lg-7 order-lg-1">' +
+    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId\', \'data\': titleData } }"></scs-title>' +
+    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId\', \'data\': paragraphData } }"></scs-paragraph>' +
+    '        <!-- ko if: linkText -->' +
+    '          <a target="_blank" data-bind="attr: { href: linkURL}" class="btn btn-lead btn-primary mt-4"><span data-bind="text: linkText"></span></a>'  +
+    '        <!-- /ko -->' +
+    '      </div>' +
+    '      <div class="col mt-5 mt-lg-0 order-lg-0">' +
+    '        <div class="mw-sm mx-auto">' +
+    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId\', \'data\': imageData } }"></scs-image>' +
     '        </div>' +
-    '      </div>' +
-    '      <div class="col-lg-7 order-lg-0 pt-4 pt-lg-0">' +
-    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId1\', \'data\': titleData } }"></scs-title>' +
-    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId1\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '        <a href="#step-two" class="btn btn-lead btn-primary mt-4">Go to step 2</a>'  +
-    '      </div>' +
-    '    </div>' +
-    '    <div class="row pt-5 pt-lg-0 mt-lg-n5" id="step-two">' +
-    '      <div class="col">' +
-    '        <div class="mw-sm-xs mx-auto">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData } }"></scs-image>' +
-    '        </div>' +
-    '      </div>' +
-    '      <div class="col-lg-7 pt-4 pt-lg-0">' +
-    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId2\', \'data\': titleData } }"></scs-title>' +
-    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '        <a href="#step-three" class="btn btn-lead btn-primary mt-4">Go to step 3</a>'  +
-    '      </div>' +
-    '    </div>' +
-    '    <div class="row pt-5 pt-lg-0 mt-lg-n5" id="step-three">' +
-    '      <div class="col order-lg-1">' +
-    '        <div class="mw-sm-xs mx-auto">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId3\', \'data\': imageData } }"></scs-image>' +
-    '        </div>' +
-    '      </div>' +
-    '      <div class="col-lg-7 order-lg-0 pt-4 pt-lg-0">' +
-    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId3\', \'data\': titleData } }"></scs-title>' +
-    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId3\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '        <a href="#step-four" class="btn btn-lead btn-primary mt-4">Go to step 4</a>'  +
-    '      </div>' +
-    '    </div>' +
-    '    <div class="row pt-5 pt-lg-0 mt-lg-n5" id="step-four">' +
-    '      <div class="col">' +
-    '        <div class="mw-sm-xs mx-auto">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId4\', \'data\': imageData } }"></scs-image>' +
-    '        </div>' +
-    '      </div>' +
-    '      <div class="col-lg-7 pt-4 pt-lg-0">' +
-    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId4\', \'data\': titleData } }"></scs-title>' +
-    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId4\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '        <a href="#step-five" class="btn btn-lead btn-primary mt-4">Next step</a>'  +
     '      </div>' +
     '    </div>' +
     '  </div>' +
     '</div>' +
     '<!-- /ko -->';
+
 
   // ----------------------------------------------
   // Define a Knockout ViewModel for your template
@@ -73,7 +41,6 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     // create the observables
     self.linkURL = ko.observable();
     self.linkText = ko.observable();
-
 
     // handle initialization 
     self.customSettingsDataInitialized = ko.observable(false);
@@ -97,7 +64,6 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     self.imageClicked = function (data, event) {
       self.raiseTrigger("imageClicked"); // matches appinfo.json
     };
-
 
     // execute action handler
     self.executeActionsListener = function (args) {
@@ -127,13 +93,28 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
       self.customSettingsDataInitialized(true);
     }, self);
     self.updateSettings = function (settings) {
-      self.updateCustomSettingsData(settings.value);
+        self.updateCustomSettingsData(settings.value);
     };
 
     // listen for the EXECUTE ACTION request to handle custom actions
     SitesSDK.subscribe(SitesSDK.MESSAGE_TYPES.EXECUTE_ACTION, $.proxy(self.executeActionsListener, self));
     // listen for settings update
     SitesSDK.subscribe(SitesSDK.MESSAGE_TYPES.SETTINGS_UPDATED, $.proxy(self.updateSettings, self));
+
+
+    // Handle Copy Style (save customSettingsData to the clipboard)
+    self.copyComponentCustomData = function() {
+      return {
+      };
+    };
+
+    // Handle Paste Style (apply customSettingsData from the clipboard)
+    self.pasteComponentCustomData = function(data) {
+
+      // save data in page
+      SitesSDK.setProperty('customSettingsData', {
+      });
+    };
 
     // listen for COPY_CUSTOM_DATA request
     SitesSDK.subscribe(SitesSDK.MESSAGE_TYPES.COPY_CUSTOM_DATA, $.proxy(self.copyComponentCustomData, self));
@@ -146,6 +127,7 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     //
     SitesSDK.getProperty('customSettingsData', self.updateCustomSettingsData);
   };
+
 
   // ----------------------------------------------
   // Create a knockout based component implemention
@@ -197,7 +179,9 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
       // deal with each property changed
       $.each(args.properties, function (index, property) {
         if (property) {
-          self.viewModel.updateComponentData(property.value);
+          if (property.name === 'customSettingsData') {
+            self.viewModel.updateComponentData(property.value);
+          }
         }
       });
     }, this);

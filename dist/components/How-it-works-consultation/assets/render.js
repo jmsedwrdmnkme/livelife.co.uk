@@ -1,63 +1,31 @@
 /* globals define */
-define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
-  'use strict'; // ----------------------------------------------
+define(['knockout', 'jquery', 'css!./design.css'], function (ko, $, css) {
+  'use strict';
+  // ----------------------------------------------
   // Define a Knockout Template for your component
   // ----------------------------------------------
   var sampleComponentTemplate =
     '<!-- ko if: initialized -->' +
-    '<div class="container-breakout py-4 position-relative how-it-works-steps text-center text-lg-start">' +
-    '  <div class="container position-relative my-5">' +
-    '    <div class="row" id="step-one">' +
-    '      <div class="col order-lg-1">' +
+    '<div class="container-breakout py-4 position-relative how-it-works-consultation py-5 mt-lg-n5 text-center text-lg-start" id="step-five">' +
+    '  <div class="container pt-lg-5 mt-lg-5">' +
+    '    <div class="row align-items-center">' +
+    '      <div class="col order-lg-1 mt-n5 mt-lg-0">' +
     '        <div class="mw-sm-xs mx-auto">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData } }"></scs-image>' +
+    '	       <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId\', \'data\': imageData } }"></scs-image>' +
     '        </div>' +
     '      </div>' +
-    '      <div class="col-lg-7 order-lg-0 pt-4 pt-lg-0">' +
-    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId1\', \'data\': titleData } }"></scs-title>' +
-    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId1\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '        <a href="#step-two" class="btn btn-lead btn-primary mt-4">Go to step 2</a>'  +
-    '      </div>' +
-    '    </div>' +
-    '    <div class="row pt-5 pt-lg-0 mt-lg-n5" id="step-two">' +
-    '      <div class="col">' +
-    '        <div class="mw-sm-xs mx-auto">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData } }"></scs-image>' +
-    '        </div>' +
-    '      </div>' +
-    '      <div class="col-lg-7 pt-4 pt-lg-0">' +
-    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId2\', \'data\': titleData } }"></scs-title>' +
-    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '        <a href="#step-three" class="btn btn-lead btn-primary mt-4">Go to step 3</a>'  +
-    '      </div>' +
-    '    </div>' +
-    '    <div class="row pt-5 pt-lg-0 mt-lg-n5" id="step-three">' +
-    '      <div class="col order-lg-1">' +
-    '        <div class="mw-sm-xs mx-auto">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId3\', \'data\': imageData } }"></scs-image>' +
-    '        </div>' +
-    '      </div>' +
-    '      <div class="col-lg-7 order-lg-0 pt-4 pt-lg-0">' +
-    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId3\', \'data\': titleData } }"></scs-title>' +
-    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId3\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '        <a href="#step-four" class="btn btn-lead btn-primary mt-4">Go to step 4</a>'  +
-    '      </div>' +
-    '    </div>' +
-    '    <div class="row pt-5 pt-lg-0 mt-lg-n5" id="step-four">' +
-    '      <div class="col">' +
-    '        <div class="mw-sm-xs mx-auto">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId4\', \'data\': imageData } }"></scs-image>' +
-    '        </div>' +
-    '      </div>' +
-    '      <div class="col-lg-7 pt-4 pt-lg-0">' +
-    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId4\', \'data\': titleData } }"></scs-title>' +
-    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId4\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '        <a href="#step-five" class="btn btn-lead btn-primary mt-4">Next step</a>'  +
+    '      <div class="col-lg-7 order-lg-0 mt-4 mt-lg-0">' +
+    '	     <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId\', \'data\': titleData } }"></scs-title>' +
+    '	     <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId\', \'data\': paragraphData } }"></scs-paragraph>' +
+    '        <!-- ko if: linkText -->' +
+    '          <a class="btn btn-lead btn-primary mt-4" target="_blank" data-bind="attr: { href: linkURL}"><span data-bind="text: linkText"></span></a>'  +
+    '        <!-- /ko -->' +
     '      </div>' +
     '    </div>' +
     '  </div>' +
     '</div>' +
     '<!-- /ko -->';
+
 
   // ----------------------------------------------
   // Define a Knockout ViewModel for your template
@@ -71,15 +39,43 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     self.id = args.id;
 
     // create the observables
+    self.imageWidth = ko.observable('200px');
     self.linkURL = ko.observable();
     self.linkText = ko.observable();
+    self.alignImage = ko.observable();
+    self.layout = ko.observable();
+    self.showTopLayout = ko.observable();
+    self.showStoryLayout = ko.observable();
 
 
     // handle initialization 
+    self.componentLayoutInitialized = ko.observable(false);
     self.customSettingsDataInitialized = ko.observable(false);
     self.initialized = ko.computed(function () {
-      return self.customSettingsDataInitialized();
+      return self.componentLayoutInitialized() && self.customSettingsDataInitialized();
     }, self);
+
+    // Style on left- or right-aligned image
+    self.imageStyle = ko.pureComputed(function () {
+      var style;
+      if (self.showTopLayout()) {
+        style = '';
+      } else {
+        style = 'flex-shrink:0;width:' + self.imageWidth() + ';';
+      }
+      return style;
+    });
+
+    // Style around paragraph component
+    self.paragraphStyle = ko.pureComputed(function () {
+      var style;
+      if (self.showTopLayout()) {
+        style = '';
+      } else {
+        style = 'flex-grow:1;';
+      }
+      return style;
+    });
 
     //
     // Raise the given trigger.
@@ -104,6 +100,15 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
       // get action and payload
       var payload = args.payload,
         action = args.action;
+
+      // handle 'setImageWidth' actions
+      if (action && action.actionName === 'setImageWidth') {
+        $.each(payload, function(index, data) {
+          if (data.name === 'imageWidth') {
+            self.imageWidth(data.value);
+          }
+        });
+      }
     };
 
     //
@@ -119,21 +124,53 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     // 
     // Handle property changes
     //
+    self.updateComponentLayout = $.proxy(function (componentLayout) {
+      var layout = componentLayout ? componentLayout : 'default';
+      self.layout(layout);
+      self.alignImage(layout === 'right' ? 'right' : 'left');
+      self.showTopLayout(layout === 'top');
+      self.showStoryLayout(layout === 'default' || layout === 'right');
+
+      self.componentLayoutInitialized(true);
+    }, self);
     self.updateCustomSettingsData = $.proxy(function (customData) {
       if (customData) {
+        self.imageWidth(customData.width);
         self.linkURL(customData.linkURL);
         self.linkText(customData.nls && customData.nls.linkText);
       }
       self.customSettingsDataInitialized(true);
     }, self);
     self.updateSettings = function (settings) {
-      self.updateCustomSettingsData(settings.value);
+      if (settings.property === 'componentLayout') {
+        self.updateComponentLayout(settings.value);
+      } else if (settings.property === 'customSettingsData') {
+        self.updateCustomSettingsData(settings.value);
+      }
     };
 
     // listen for the EXECUTE ACTION request to handle custom actions
     SitesSDK.subscribe(SitesSDK.MESSAGE_TYPES.EXECUTE_ACTION, $.proxy(self.executeActionsListener, self));
     // listen for settings update
     SitesSDK.subscribe(SitesSDK.MESSAGE_TYPES.SETTINGS_UPDATED, $.proxy(self.updateSettings, self));
+
+
+    // Handle Copy Style (save customSettingsData to the clipboard)
+    self.copyComponentCustomData = function() {
+      return {
+        width: this.imageWidth()
+      };
+    };
+
+    // Handle Paste Style (apply customSettingsData from the clipboard)
+    self.pasteComponentCustomData = function(data) {
+      this.imageWidth(data.width);
+
+      // save data in page
+      SitesSDK.setProperty('customSettingsData', {
+        width: this.imageWidth()
+      });
+    };
 
     // listen for COPY_CUSTOM_DATA request
     SitesSDK.subscribe(SitesSDK.MESSAGE_TYPES.COPY_CUSTOM_DATA, $.proxy(self.copyComponentCustomData, self));
@@ -142,10 +179,12 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     SitesSDK.subscribe(SitesSDK.MESSAGE_TYPES.PASTE_CUSTOM_DATA, $.proxy(self.pasteComponentCustomData, self));
 
     //
-    // Initialize the customSettingsData values
+    // Initialize the componentLayout & customSettingsData values
     //
+    SitesSDK.getProperty('componentLayout', self.updateComponentLayout);
     SitesSDK.getProperty('customSettingsData', self.updateCustomSettingsData);
   };
+
 
   // ----------------------------------------------
   // Create a knockout based component implemention
@@ -197,7 +236,11 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
       // deal with each property changed
       $.each(args.properties, function (index, property) {
         if (property) {
-          self.viewModel.updateComponentData(property.value);
+          if (property.name === 'customSettingsData') {
+            self.viewModel.updateComponentData(property.value);
+          } else if (property.name === 'componentLayout') {
+            self.viewModel.updateLayout(property.value);
+          }
         }
       });
     }, this);
