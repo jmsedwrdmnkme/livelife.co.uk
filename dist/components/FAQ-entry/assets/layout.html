@@ -1,0 +1,12 @@
+{{#fields}}
+<div class="accordion-item">
+  <h2 class="accordion-header" id="faq-heading">
+    <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse" aria-expanded="false" aria-controls="faq-collapse">
+      {{faq_title}}
+    </button>
+  </h2>
+  <div id="faq-collapse" class="accordion-collapse collapse" aria-labelledby="faq-heading" data-bs-parent="#listFaq">
+    <div class="accordion-body">{{{faq_entry}}}</div>
+  </div>
+</div>
+{{/fields}}

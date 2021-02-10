@@ -47,17 +47,7 @@ function javascript() {
   return gulp
     .src([
       'node_modules/@popperjs/core/dist/umd/popper.js',
-      //'node_modules/bootstrap/js/dist/alert',
-      'node_modules/bootstrap/js/dist/button',
-      //'node_modules/bootstrap/js/dist/carousel',
-      'node_modules/bootstrap/js/dist/collapse',
-      //'node_modules/bootstrap/js/dist/dropdown',
-      //'node_modules/bootstrap/js/dist/modal',
-      //'node_modules/bootstrap/js/dist/popover',
-      //'node_modules/bootstrap/js/dist/scrollspy',
-      //'node_modules/bootstrap/js/dist/tab',
-      //'node_modules/bootstrap/js/dist/toast',
-      //'node_modules/bootstrap/js/dist/tooltip',
+      'node_modules/bootstrap/dist/js/bootstrap.js',
       './src/js/scripts.js'
     ], { allowEmpty: true })
     .pipe(

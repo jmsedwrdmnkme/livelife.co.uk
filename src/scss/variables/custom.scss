@@ -425,24 +425,24 @@ $font-weight-base:            $font-weight-light !default;
 // $line-height-sm:              1.25 !default;
 // $line-height-lg:              2 !default;
 //
-$h1-font-size:                $font-size-base * 1.9411 !default; // 33px
-$h2-font-size:                $font-size-base * 1.5 !default; // 25.5px
-$h3-font-size:                $font-size-base * 1.25 !default; // 21.25px
-// $h4-font-size:                $font-size-base * 1.5 !default;
+$h1-font-size:                $font-size-base * 2.352 !default; // 40px
+$h2-font-size:                $font-size-base * 1.9411 !default; // 33px
+$h3-font-size:                $font-size-base * 1.5 !default; // 25.5px
+$h4-font-size:                $font-size-base * 1.25 !default; // 21.25px
 // $h5-font-size:                $font-size-base * 1.25 !default;
 // $h6-font-size:                $font-size-base !default;
-//
-// // scss-docs-start font-sizes
-// $font-sizes: (
-//   1: $h1-font-size,
-//   2: $h2-font-size,
-//   3: $h3-font-size,
-//   4: $h4-font-size,
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
 //   5: $h5-font-size,
 //   6: $h6-font-size
-// ) !default;
-// // scss-docs-end font-sizes
-//
+) !default;
+// scss-docs-end font-sizes
+
 // $headings-margin-bottom:      $spacer / 2 !default;
 // $headings-font-family:        null !default;
 // $headings-font-style:         null !default;
@@ -1036,11 +1036,11 @@ $navbar-light-active-color:         $black !default;
 // $accordion-button-color:                  $accordion-color !default;
 // $accordion-button-bg:                     $accordion-bg !default;
 // $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
-// $accordion-button-active-bg:              tint-color($component-active-bg, 90%) !default;
+$accordion-button-active-bg:              transparent !default;
 // $accordion-button-active-color:           shade-color($primary, 10%) !default;
 //
-// $accordion-button-focus-border-color:     $input-focus-border-color !default;
-// $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
+$accordion-button-focus-border-color:     none !default;
+$accordion-button-focus-box-shadow:       none !default;
 //
 // $accordion-icon-width:                    1.25rem !default;
 // $accordion-icon-color:                    $accordion-color !default;
