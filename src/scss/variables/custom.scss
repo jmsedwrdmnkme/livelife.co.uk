@@ -854,7 +854,7 @@ $font-sizes: (
 
 // $nav-link-padding-y:                .5rem !default;
 // $nav-link-padding-x:                1rem !default;
-// $nav-link-font-size:                null !default;
+$nav-link-font-size:                0.939rem !default;
 // $nav-link-font-weight:              null !default;
 // $nav-link-color:                    null !default;
 // $nav-link-hover-color:              null !default;
@@ -1021,7 +1021,7 @@ $navbar-light-active-color:         $black !default;
 //
 // // Accordion
 // $accordion-padding-y:                     1rem !default;
-// $accordion-padding-x:                     1.25rem !default;
+$accordion-padding-x:                     0 !default;
 // $accordion-color:                         $body-color !default;
 // $accordion-bg:                            transparent !default;
 // $accordion-border-width:                  $border-width !default;

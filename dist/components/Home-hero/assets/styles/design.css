@@ -1,0 +1,22 @@
+.home-hero-top {
+  background-image: url("data:image/svg+xml,%3Csvg width='1024' height='1225' viewBox='0 0 1024 1225' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0C0 0 84.4999 120.227 217.5 123.655C350.5 127.082 430.761 65.956 532.5 64.7214C607.366 63.8129 704.936 82.6398 779 177.852C862.5 285.195 1024 137.336 1024 137.336V1224.5H0L0 0Z' fill='%23EBF6F3'/%3E%3C/svg%3E ");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.home-hero-bottom {
+  background-color: #EBF6F3;
+}
+
+@media (max-width: 1023.98px) {
+  .home-hero-top {
+    background-position: 50% calc(50% + 43vw);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-hero-top {
+    padding-bottom: 13rem !important;
+    background-position: 50% calc(100% + 98vw);
+  }
+}

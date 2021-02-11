@@ -3,21 +3,69 @@
 <div class="container">
   <div class="container-breakout py-5 faq-container">
     <div class="container">
-      <div class="text-center">
+      <div class="text-center faq-search position-relative">
         <h1 class="h3">Frequently Asked Questions</h1>
         <p class="h1 mt-3">We are here to <strong>help</strong></p>
+        <img src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/faq-search-left.svg" class="image-left" alt="" width="213" height="189">
         <div class="row justify-content-center mt-4 pt-3">
           <div class="col-10 col-lg-6">
             <input class="form-control bg-purplelight" type="text" placeholder="Ask any question here&hellip;" id="inputFaq">
           </div>
         </div>
+        <img src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/faq-search-right.svg" class="d-none d-lg-block image-right" alt="" width="200" height="201">
       </div>
       <div class="accordion accordion-flush pt-5 mt-5 position-relative" id="listFaq">
-        <p class="h3">Top questions</p>
-        <div id="slot-content" class="container scs-slot scs-responsive"></div>
+        <p class="h2 mt-5 pt-5">Top questions</p>
+        <div id="slot-content" class="mt-4 pt-2 scs-slot scs-responsive"></div>
+      </div>
+    </div>
+    <div class="container-breakout how-it-works-benefits py-5 mt-5 text-center text-lg-start">
+      <div class="container my-4">
+        <div class="row align-items-center">
+          <div class="col">
+            <div class="mw-sm mx-auto">
+              <img src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/faq-questions.svg" alt="" width="360" height="323">
+            </div>
+          </div>
+          <div class="col-lg-7 mt-5 mt-lg-0">
+            <p class="h2">Do you still have <strong>questions?</strong></p>
+            <p class="mt-3">Please give us a call on 0300 555 0788 (local rate) if you'd like to know more about livelife therapy or have questions that are not covered here. We can also book you in for an <a href="#">initial free consultation</a> with one of our therapists.</p>
+            <a target="_blank" href="#" class="btn btn-lead btn-primary mt-4">Get in touch</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  function handleFaq(faq) {
+    const faqEntries = document.querySelectorAll('.accordion-item');
+    for (var i = 0; i < faqEntries.length; i++) {
+      faqEntries[i].querySelector('.accordion-header').setAttribute('id', 'faq-heading-' + [i]);
+      faqEntries[i].querySelector('.accordion-button').setAttribute('data-bs-target', '#faq-collapse-' + [i]);
+      faqEntries[i].querySelector('.accordion-button').setAttribute('aria-controls', 'faq-collapse-' + [i]);
+      faqEntries[i].querySelector('.accordion-collapse').setAttribute('id', 'faq-collapse-' + [i]);
+      faqEntries[i].querySelector('.accordion-collapse').setAttribute('aria-labelledby', 'faq-heading-' + [i]);
+    }
+  }
+
+  var observer = new MutationObserver(function (mutations, me) {
+    var faq = document.querySelector('.accordion-item');
+    if (faq) {
+      setTimeout(() => {
+        handleFaq(faq); 
+      }, 200);
+
+      me.disconnect();
+      return;
+    }
+  });
+
+  observer.observe(document, {
+    childList: true,
+    subtree: true
+  });
+</script>
 
 {{> ./partials/footer }}
