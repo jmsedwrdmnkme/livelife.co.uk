@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Sample Custom Component</title>
+
+	<!-- include sample apps styling -->
+	<link href="/_sitescloud/renderer/app/sdk/css/app-styles.css" rel="stylesheet">
+
+	<!-- include supporting files -->
+	<script type="text/javascript" src="/_sitescloud/renderer/app/apps/js/knockout.min.js"></script>
+	<script type="text/javascript" src="/_sitescloud/renderer/app/apps/js/jquery.min.js"></script>
+
+	<!-- include the Sites SDK -->
+	<script type="text/javascript" src="/_sitescloud/renderer/app/sdk/js/sites.min.js"></script>
+</head>
+
+<body data-bind="visible: true" style="display:none; margin:0px; padding:0px;background:transparent;background-image:none;">
+	<!-- ko if: initialized -->
+	<div class="scs-component-settings">
+		<div>
+			<!-- Width -->
+			<label id="widthLabel" for="width" class="settings-heading" data-bind="text: 'Image Width'"></label>
+			<input id="width" data-bind="value: width" placeholder="example: 200px or 33%" class="settings-text-box" style="margin-bottom: 10px;">
+			<!-- Custom Link Text -->
+			<label id="linkTextLabel" for="linkText" class="settings-heading" data-bind="text: 'Link Text'"></label>
+			<input id="linkText" data-bind="value: linkText" placeholder="example: More..." class="settings-text-box" style="margin-bottom: 10px;">
+			<!-- Custom Link URL -->
+			<label id="linkURLLabel" for="linkURL" class="settings-heading" data-bind="text: 'Link URL'"></label>
+			<textArea id="linkURL" data-bind="value: linkURL" class="settings-text-box"></textArea>
+		</div>
+	</div>
+	<!-- /ko -->
+	<!-- ko ifnot: initialized -->
+	<div data-bind="text: 'waiting for initialization to complete'" class="settings-heading"></div>
+	<!-- /ko -->
+	<script type="text/javascript">
+		// set the iFrame height when we've fully rendered
+		ko.bindingHandlers.scsCompComponentImpl = {
+			init: function (element, valueAccessor, allBindings, viewModel, bindingContext) {
+				var body = document.body,
+					html = document.documentElement;
+
+				SitesSDK.setHeight(Math.max(
+					body.scrollHeight,
+					body.offsetHeight,
+					html.clientHeight,
+					html.scrollHeight,
+					html.offsetHeight));
+			}
+		};
+
+		// define the viewModel object
+		var SettingsViewModel = function () {
+			var self = this;
+
+			// create the observables for passing data
+			self.width = ko.observable();
+			self.linkText = ko.observable();
+			self.linkURL = ko.observable();
+
+			// create rest of viewModel
+			self.initialized = ko.observable(false);
+			self.saveData = false;
+
+			// Get custom settings
+			SitesSDK.getProperty('customSettingsData', function (data) {
+				//update observables
+				self.width(data.width);
+				self.linkURL(data.linkURL);
+				self.linkText(data.nls && data.nls.linkText);
+
+				// note that viewModel is initialized and can start saving data
+				self.initialized(true);
+				self.saveData = true;
+			});
+
+
+			// save whenever any updates occur
+			self.save = ko.computed(function () {
+				var saveconfig = {
+					'width': isNaN(self.width()) ? self.width() : self.width() + 'px',
+					'linkURL': self.linkURL(),
+					'nls': {
+						linkText: self.linkText()
+					}
+				};
+
+				// save data in page
+				if (self.saveData) {
+					SitesSDK.setProperty('customSettingsData', saveconfig);
+				}
+			}, self);
+		};
+
+
+		// apply the bindings
+		ko.applyBindings(new SettingsViewModel());
+	</script>
+</body>
+</html>
