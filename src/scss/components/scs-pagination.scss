@@ -1,0 +1,23 @@
+.scs-pagination {
+  .loadMore {
+    background: none !important;
+    font-size: inherit !important;
+    height: inherit !important;
+    font-weight: inherit !important;
+    color: inherit !important;
+    margin: inherit !important;
+    line-height: inherit !important;
+    min-width: inherit !important;
+    box-sizing: inherit !important;
+    border: none !important;
+
+    a {
+      @extend .mt-5;
+      @extend .btn;
+      @extend .btn-lead;
+      @extend .btn-primary;
+      padding: .375rem 3.75rem !important;
+      font-size: 1.0625rem !important;
+    }
+  }
+}

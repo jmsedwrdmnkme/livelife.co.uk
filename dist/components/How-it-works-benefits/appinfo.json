@@ -18,7 +18,6 @@
     "componentId": "sampleComp",
     "componentLayout": "default",
     "customSettingsData": {
-      "width": "260px",
       "linkURL": "https://docs.oracle.com/pls/topic/lookup?ctx=cloud&id=CECCE-GUID-D655DF5D-4A93-4FD3-B1BB-04EC0D0B8312",
       "nls": {
         "linkText": "More..."
