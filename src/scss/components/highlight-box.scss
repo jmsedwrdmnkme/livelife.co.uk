@@ -1,0 +1,35 @@
+@include media-breakpoint-up(lg) {
+  [class*=highlight-box] {
+    background: white;
+    border: solid 0.1rem;
+    padding: 0.5rem 1.5rem 1.5rem;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -0.1rem;
+      height: calc(100% + 0.2rem);
+      width: calc(100vw - 960px / 2);
+      border-top: solid 0.1rem;
+      border-bottom: solid 0.1rem;
+      background-color: white;
+    }
+
+    &[class*=-left] {
+      border-radius: 0 1.5rem 1.5rem 0;
+
+      &::before {
+        right: calc(100% - 0.1rem);
+      }
+    }
+
+    &[class*=-right] {
+      border-radius: 1.5rem 0 0 1.5rem;
+
+      &::before {
+        left: calc(100% - 0.1rem);
+      }
+    }
+  }
+}

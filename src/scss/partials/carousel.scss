@@ -1,0 +1,17 @@
+.carousel-indicators {
+  button {
+    border-radius: 50%;
+    height: 0.75rem;
+    width: 0.25rem;
+    display: block;
+    border: none;
+    background: $purple;
+    outline: none !important;
+    margin: 0 0.5rem;
+    transition: transform 0.2s;
+
+    &.active {
+      transform: scale(1.5);
+    }
+  }
+}
