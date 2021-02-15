@@ -1,0 +1,25 @@
+.therapists-hero {
+  background-image: url("data:image/svg+xml,%3Csvg width='1024' height='119' viewBox='0 0 1024 119' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 43C0 43 61.5 112 185 112C308.5 112 426 43 541.5 43C657 43 790 129.966 882.5 112C975 94.0337 1024 0 1024 0V119H0V43Z' fill='%23FDF5F3'/%3E%3C/svg%3E ");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+@media (max-width: 1023.98px) {
+  .therapists-hero::before {
+    content: '';
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #FDF5F3;
+    height: calc(50% + -5vw);
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .therapists-hero {
+    background-position: 50% 100.5%;
+    padding-bottom: 6rem !important;
+  }
+}

@@ -1,0 +1,41 @@
+{{> ./partials/header }}
+
+<div class="container">
+  <div id="slot-content" class="scs-slot scs-responsive"></div>
+</div>
+
+<script>
+  function handleFaq(therapists) {
+    const therapistEntries = document.querySelectorAll('.therapist-entry');
+    for (var i = 0; i < therapistEntries.length; i++) {
+      therapistEntries[i].setAttribute('id', 'step-' + [i]);
+
+      if (i % 2 == 0) {
+        therapistEntries[i].querySelector('.highlight-box').classList.add('highlight-box-left');
+      } else {
+        therapistEntries[i].querySelector('.main').classList.remove('order-lg-1');
+        therapistEntries[i].querySelector('.aside').classList.remove('order-lg-0');
+        therapistEntries[i].querySelector('.highlight-box').classList.add('highlight-box-right');
+      }
+    }
+  }
+
+  var observer = new MutationObserver(function (mutations, me) {
+    var therapist = document.querySelector('.therapist-entry');
+    if (therapist) {
+      setTimeout(() => {
+        handleFaq(therapist); 
+      }, 200);
+
+      me.disconnect();
+      return;
+    }
+  });
+
+  observer.observe(document, {
+    childList: true,
+    subtree: true
+  });
+</script>
+
+{{> ./partials/footer }}

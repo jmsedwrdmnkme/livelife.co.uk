@@ -1,0 +1,14 @@
+@media (min-width: 1024px) {
+  .therapist-entry .highlight-box-left,
+  .therapist-entry .highlight-box-right {
+    background-color: #FCF0ED;
+    border-color: #FCF0ED;
+    padding-top: 1.25rem;
+  }
+
+  .therapist-entry .highlight-box-left::before,
+  .therapist-entry .highlight-box-right::before {
+    background-color: #FCF0ED;
+    border-color: #FCF0ED;
+  }
+}
