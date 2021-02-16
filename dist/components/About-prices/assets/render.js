@@ -6,20 +6,42 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
   // ----------------------------------------------
   var sampleComponentTemplate =
     '<!-- ko if: initialized -->' +
-    '<div class="container-breakout how-it-works-benefits py-5 text-center text-lg-start">' +
+    '<div class="container-breakout about-prices py-5" id="step-2">' +
     '  <div class="container my-4">' +
-    '    <div class="row align-items-center">' +
-    '      <div class="col">' +
-    '        <div class="mw-sm mx-auto">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId\', \'data\': imageData } }"></scs-image>' +
+    '    <div class="row">' +
+    '      <div class="col-12 text-center">' +
+    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId1\', \'data\': titleData1 } }"></scs-title>' +
+    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId1\', \'data\': paragraphData1 } }"></scs-paragraph>' +
+    '      </div>' +
+    '    </div>' +
+    '    <div class="row justify-content-between">' +
+    '      <div class="col-lg-5 mt-5 order-lg-2">' +
+    '        <div class="card tables p-3 text-center">' +
+    '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId4\', \'data\': titleData4 } }"></scs-title>' +
+    '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId4\', \'data\': paragraphData4 } }"></scs-paragraph>' +
+    '        </div>' +
+    '        <div class="card tables p-3 text-center mt-4">' +
+    '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId5\', \'data\': titleData5 } }"></scs-title>' +
+    '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId5\', \'data\': paragraphData5 } }"></scs-paragraph>' +
+    '        </div>' +
+    '        <div class="card tables p-3 text-center mt-4">' +
+    '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId6\', \'data\': titleData6 } }"></scs-title>' +
+    '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId6\', \'data\': paragraphData6 } }"></scs-paragraph>' +
+    '        </div>' +
+    '        <div class="mw-sm mx-auto mt-5">' +
+    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData1 } }"></scs-image>' +
     '        </div>' +
     '      </div>' +
-    '      <div class="col-lg-7 mt-5 mt-lg-0">' +
-    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId\', \'data\': titleData } }"></scs-title>' +
-    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '        <!-- ko if: linkText -->' +
-    '          <a target="_blank" data-bind="attr: { href: linkURL}" class="btn btn-lead btn-primary mt-4"><span data-bind="text: linkText"></span></a>'  +
-    '        <!-- /ko -->' +
+    '      <div class="col-lg-6 mt-5 order-lg-1">' +
+    '        <div class="card coloured p-4 py-lg-5">' +
+    '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId2\', \'data\': titleData2 } }"></scs-title>' +
+    '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData2 } }"></scs-paragraph>' +
+    '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId3\', \'data\': titleData3 } }"></scs-title>' +
+    '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId3\', \'data\': paragraphData3 } }"></scs-paragraph>' +
+    '          <!-- ko if: linkText1 -->' +
+    '            <a target="_blank" data-bind="attr: { href: linkURL1}" class="btn btn-lead btn-primary mt-1"><span data-bind="text: linkText1"></span></a>'  +
+    '          <!-- /ko -->' +
+    '        </div>' +
     '      </div>' +
     '    </div>' +
     '  </div>' +
@@ -39,8 +61,10 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
 
     // create the observables
     self.imageWidth = ko.observable('200px');
-    self.linkURL = ko.observable();
-    self.linkText = ko.observable();
+    self.linkURL1 = ko.observable();
+    self.linkText1 = ko.observable();
+    self.linkURL2 = ko.observable();
+    self.linkText2 = ko.observable();
     self.alignImage = ko.observable();
     self.layout = ko.observable();
     self.showTopLayout = ko.observable();
@@ -113,11 +137,31 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     //
     // Seed nested component data
     //
-    self.imageData = {
+    self.imageData1 = {
     };
-    self.titleData = {
+    self.titleData1 = {
     };
-    self.paragraphData = {
+    self.titleData2 = {
+    };
+    self.titleData3 = {
+    };
+    self.titleData4 = {
+    };
+    self.titleData5 = {
+    };
+    self.titleData6 = {
+    };
+    self.paragraphData1 = {
+    };
+    self.paragraphData2 = {
+    };
+    self.paragraphData3 = {
+    };
+    self.paragraphData4 = {
+    };
+    self.paragraphData5 = {
+    };
+    self.paragraphData6 = {
     };
 
     // 
@@ -135,8 +179,10 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     self.updateCustomSettingsData = $.proxy(function (customData) {
       if (customData) {
         self.imageWidth(customData.width);
-        self.linkURL(customData.linkURL);
-        self.linkText(customData.nls && customData.nls.linkText);
+        self.linkURL1(customData.linkURL1);
+        self.linkText1(customData.nls1 && customData.nls1.linkText);
+        self.linkURL2(customData.linkURL2);
+        self.linkText2(customData.nls2 && customData.nls2.linkText);
       }
       self.customSettingsDataInitialized(true);
     }, self);

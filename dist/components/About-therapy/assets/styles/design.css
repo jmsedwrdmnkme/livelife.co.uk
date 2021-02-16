@@ -1,0 +1,20 @@
+.about-therapy {
+  background-color: #F5F6FE;
+  margin-top: -0.25rem;
+}
+
+.about-therapy .card {
+  border-radius: 1.5rem !important;
+}
+
+.about-therapy .card .mw-xs {
+  max-width: 4rem !important;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-therapy .card .scs-title .scs-title-text {
+  font-size: 1.4rem !important;
+  margin: 1.5rem 0 1rem;
+}

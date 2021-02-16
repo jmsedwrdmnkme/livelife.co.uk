@@ -21,6 +21,19 @@
     <!-- ko if: initialized -->
     <div class="scs-component-settings">
       <div>
+        <!-- Custom Link Text -->
+        <label id="linkTextLabel1" for="linkText1" class="settings-heading" data-bind="text: 'Link Text'"></label>
+        <input id="linkText1" data-bind="value: linkText1" placeholder="example: More..." class="settings-text-box" style="margin-bottom: 10px;">
+        <!-- Custom Link URL -->
+        <label id="linkURLLabel1" for="linkURL1" class="settings-heading" data-bind="text: 'Link URL'"></label>
+        <textArea id="linkURL1" data-bind="value: linkURL1" class="settings-text-box"></textArea>
+
+        <!-- Custom Link Text -->
+        <label id="linkTextLabel2" for="linkText2" class="settings-heading" data-bind="text: 'Link Text'"></label>
+        <input id="linkText2" data-bind="value: linkText2" placeholder="example: More..." class="settings-text-box" style="margin-bottom: 10px;">
+        <!-- Custom Link URL -->
+        <label id="linkURLLabel2" for="linkURL2" class="settings-heading" data-bind="text: 'Link URL'"></label>
+        <textArea id="linkURL2" data-bind="value: linkURL2" class="settings-text-box"></textArea>
       </div>
     </div>
     <!-- /ko -->
@@ -49,6 +62,10 @@
 
         // create the observables for passing data
         self.width = ko.observable();
+        self.linkText1 = ko.observable();
+        self.linkURL1 = ko.observable();
+        self.linkText2 = ko.observable();
+        self.linkURL2 = ko.observable();
 
         // create rest of viewModel
         self.initialized = ko.observable(false);
@@ -58,6 +75,10 @@
         SitesSDK.getProperty('customSettingsData', function (data) {
           //update observables
           self.width(data.width);
+          self.linkURL1(data.linkURL1);
+          self.linkText1(data.nls1 && data.nls1.linkText);
+          self.linkURL2(data.linkURL2);
+          self.linkText2(data.nls2 && data.nls2.linkText);
 
           // note that viewModel is initialized and can start saving data
           self.initialized(true);
@@ -68,6 +89,15 @@
         // save whenever any updates occur
         self.save = ko.computed(function () {
           var saveconfig = {
+            'width': isNaN(self.width()) ? self.width() : self.width() + 'px',
+            'linkURL1': self.linkURL1(),
+            'nls1': {
+              linkText: self.linkText1()
+            },
+            'linkURL2': self.linkURL2(),
+            'nls2': {
+              linkText: self.linkText2()
+            }
           };
 
           // save data in page

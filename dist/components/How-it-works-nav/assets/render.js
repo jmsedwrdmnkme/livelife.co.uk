@@ -6,7 +6,7 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
   // ----------------------------------------------
   var sampleComponentTemplate =
     '<!-- ko if: initialized -->' +
-    '<div class="container-breakout pt-4 pb-5 position-relative how-it-works-nav bg-purplelight">' +
+    '<div class="container-breakout mt-n1 pt-4 pb-5 position-relative how-it-works-nav bg-purplelight">' +
     '  <div class="container position-relative">' +
     '    <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId\', \'data\': titleData } }"></scs-title>' +
     '    <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId\', \'data\': paragraphData } }"></scs-paragraph>' +

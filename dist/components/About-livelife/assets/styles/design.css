@@ -1,0 +1,18 @@
+.about-livelife {
+  background-image: url("data:image/svg+xml,%3Csvg width='1024' height='286' viewBox='0 0 1024 286' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1024 285.5V220.5C1024 220.5 954.687 296.621 847 281C739.313 265.379 707.5 186.5 565.5 186.5C423.5 186.5 358.5 251 209 220.5C59.5 190 0 0.5 0 0.5V285.5H1024Z' fill='%23F5F6FE'/%3E%3C/svg%3E ");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: 100%;
+}
+
+@media (max-width: 1023.98px) {
+  .about-livelife {
+    padding-bottom: 20vw !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-livelife {
+    padding-bottom: 12rem !important;
+  }
+}

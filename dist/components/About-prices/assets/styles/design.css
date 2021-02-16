@@ -1,0 +1,69 @@
+.about-prices {
+  background-image: url("data:image/svg+xml,%3Csvg width='1024' height='117' viewBox='0 0 1024 117' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d)'%3E%3Cpath d='M1023 12.4302C1023 12.4302 930.508 96.6608 770.508 96.6606C610.508 96.6605 426.508 24.1606 264.008 24.1606C101.508 24.1606 -2.99167 75.6606 -2.99167 75.6606' stroke='%236E72BB' stroke-opacity='0.29'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d' x='-14.2202' y='0.63089' width='1056.56' height='115.636' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'/%3E%3CfeOffset dx='4' dy='4'/%3E%3CfeGaussianBlur stdDeviation='7.5'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.470588 0 0 0 0 0.486274 0 0 0 0 0.784314 0 0 0 0.4 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E ");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: 100%;
+}
+
+@media (max-width: 1023.98px) {
+  .about-prices {
+    padding-bottom: 20vw !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-prices {
+    padding-bottom: 10vw !important;
+  }
+}
+
+.about-prices .coloured {
+  background-color: #FDF5F3;
+}
+
+.about-prices .coloured .scs-title .scs-title-text {
+  font-size: 1.75rem;
+}
+
+.about-prices .coloured .scs-paragraph .scs-paragraph-text {
+  margin-bottom: 1.25rem;
+}
+
+.about-prices .tables {
+  border: 0.2rem solid #DE744D !important;
+  border-radius: 0.5rem !important;
+  overflow: hidden !important;
+}
+
+.about-prices .tables .scs-title .scs-title-text {
+  background-color: #FAE9E3;
+  border-bottom: 0.2rem solid #DE744D !important;
+  margin: -1rem -1rem 0 !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;  
+  padding: 1rem !important;
+}
+
+.about-prices table,
+.about-prices td {
+  width: 100% !important;
+  background: none !important;
+  border: 0 !important;
+}
+
+.about-prices tr {
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.about-prices tr:last-child {
+  padding-bottom: 0 !important;
+}
+
+.about-prices tr:not(:last-child) {
+  border-bottom: 1px solid #E2E2E2;
+}
+
+.about-prices td:first-child {
+  text-align: left;
+}

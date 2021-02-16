@@ -82,17 +82,29 @@
       "marginTop": 0,
       "useStyleClass": "false"
     }
-    }, {
-    "id": "paragraphId",
+    }, 
+    {
+    "id": "paragraphId1",
     "type": "scs-paragraph",
     "data": {
       "userText": "<p style=\"line-height:1.4em;margin-bottom:4px;\">As a page author, you can edit the content and settings for this component. To change settings, including triggers and actions, click the component menu and choose Settings.</p><p style=\"line-height:1.4em;\">As a component developer, you can change the component and its defaults (such as this text) either by working with the files directly through the components browser or by using the desktop app to work with the files on your local system.</p>",
       "marginBottom": 0,
       "marginLeft": 0,
       "marginRight": 0,
-      "marginTop": 0,
-      "useStyleClass": "false"
+      "marginTop": 0
     }
-    }]
+    },
+    {
+    "id": "paragraphId2",
+    "type": "scs-paragraph",
+    "data": {
+      "userText": "<p style=\"line-height:1.4em;margin-bottom:4px;\">As a page author, you can edit the content and settings for this component. To change settings, including triggers and actions, click the component menu and choose Settings.</p><p style=\"line-height:1.4em;\">As a component developer, you can change the component and its defaults (such as this text) either by working with the files directly through the components browser or by using the desktop app to work with the files on your local system.</p>",
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0
+    }
+    }
+    ]
   }
 }

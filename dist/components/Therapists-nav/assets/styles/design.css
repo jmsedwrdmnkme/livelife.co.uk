@@ -1,3 +1,11 @@
 .therapists-nav {
   background-color: #FDF5F3;
 }
+
+.therapists-nav .card {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.982823 0.271054C1.23904 0.0480137 1.63785 0.0637221 1.87359 0.30614C1.88132 0.314091 1.88883 0.32224 1.89609 0.330577L6.06339 5.11339L10.2422 0.312901C10.4613 0.0612383 10.8545 0.0252538 11.1205 0.232527C11.1289 0.239089 11.1371 0.245859 11.1452 0.252829C11.417 0.488353 11.4464 0.884007 11.2121 1.1532L6.59913 6.45344C6.56727 6.50038 6.52863 6.54423 6.48331 6.58369C6.22709 6.80673 5.82828 6.79102 5.59254 6.5486C5.58481 6.54065 5.57731 6.5325 5.57004 6.52416L0.916397 1.18341C0.678918 0.910864 0.708088 0.510213 0.982823 0.271054Z' fill='%23787CC8'/%3E%3C/svg%3E ");
+  background-repeat: no-repeat;
+  background-position: 50% calc(100% - 1.5rem);
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}

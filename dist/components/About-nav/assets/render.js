@@ -1,71 +1,44 @@
 /* globals define */
-define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
-  'use strict'; // ----------------------------------------------
+define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) {
+  'use strict';
+  // ----------------------------------------------
   // Define a Knockout Template for your component
   // ----------------------------------------------
   var sampleComponentTemplate =
     '<!-- ko if: initialized -->' +
-    '<div class="container-breakout py-4 position-relative how-it-works-steps text-center text-lg-start">' +
-    '  <div class="container position-relative my-5">' +
-    '    <div id="step-one">' +
-    '      <div class="row align-items-center">' +
-    '        <div class="col order-lg-1">' +
-    '          <div class="mw-sm mx-auto">' +
-    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData } }"></scs-image>' +
+    '<div class="container-breakout pt-4 pb-5 position-relative about-nav">' +
+    '  <div class="container position-relative">' +
+    '    <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId\', \'data\': titleData } }"></scs-title>' +
+    '    <div class="row justify-content-center px-4 px-lg-0">' +
+    '      <div class="col-6 col-lg-4 d-flex">' +
+    '        <a href="#step-0" class="card w-100 p-3 my-3 mx-lg-3 text-center text-decoration-none text-dark">' +
+    '          <div class="col-10 col-lg-8 mx-auto">' +
+    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData1 } }"></scs-image>' +
     '          </div>' +
-    '        </div>' +
-    '        <div class="col-lg-7 order-lg-0 pt-4 pt-lg-0">' +
-    '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId1\', \'data\': titleData } }"></scs-title>' +
-    '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId1\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '          <a href="#step-two" class="btn btn-lead btn-primary mt-4">Go to step 2</a>'  +
-    '        </div>' +
+    '          <span class="mt-2"><scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId1\', \'data\': paragraphData1 } }"></scs-paragraph></span>' +
+    '        </a>' +
     '      </div>' +
-    '    </div>' +
-    '    <div id="step-two">' +
-    '      <div class="row align-items-center pt-5 pt-lg-0 mt-lg-n5">' +
-    '        <div class="col">' +
-    '          <div class="mw-sm mx-auto">' +
-    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData } }"></scs-image>' +
+    '      <div class="col-6 col-lg-4 d-flex">' +
+    '        <a href="#step-1" class="card w-100 p-3 my-3 mx-lg-3 text-center text-decoration-none text-dark">' +
+    '          <div class="col-10 col-lg-8 mx-auto">' +
+    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData2 } }"></scs-image>' +
     '          </div>' +
-    '        </div>' +
-    '        <div class="col-lg-7 pt-4 pt-lg-0">' +
-    '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId2\', \'data\': titleData } }"></scs-title>' +
-    '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '          <a href="#step-three" class="btn btn-lead btn-primary mt-4">Go to step 3</a>'  +
-    '        </div>' +
+    '          <span class="mt-2"><scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData2 } }"></scs-paragraph></span>' +
+    '        </a>' +
     '      </div>' +
-    '    </div>' +
-    '    <div id="step-three">' +
-    '      <div class="row align-items-center pt-5 pt-lg-0 mt-lg-n5">' +
-    '        <div class="col order-lg-1">' +
-    '          <div class="mw-sm mx-auto">' +
-    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId3\', \'data\': imageData } }"></scs-image>' +
+    '      <div class="col-6 col-lg-4 d-flex">' +
+    '        <a href="#step-2" class="card w-100 p-3 my-3 mx-lg-3 text-center text-decoration-none text-dark">' +
+    '          <div class="col-10 col-lg-8 mx-auto">' +
+    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId3\', \'data\': imageData3 } }"></scs-image>' +
     '          </div>' +
-    '        </div>' +
-    '        <div class="col-lg-7 order-lg-0 pt-4 pt-lg-0">' +
-    '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId3\', \'data\': titleData } }"></scs-title>' +
-    '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId3\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '          <a href="#step-four" class="btn btn-lead btn-primary mt-4">Go to step 4</a>'  +
-    '        </div>' +
-    '      </div>' +
-    '    </div>' +
-    '    <div id="step-four">' +
-    '      <div class="row align-items-center pt-5 pt-lg-0 mt-lg-n5">' +
-    '        <div class="col">' +
-    '          <div class="mw-sm mx-auto">' +
-    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId4\', \'data\': imageData } }"></scs-image>' +
-    '          </div>' +
-    '        </div>' +
-    '        <div class="col-lg-7 pt-4 pt-lg-0">' +
-    '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId4\', \'data\': titleData } }"></scs-title>' +
-    '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId4\', \'data\': paragraphData } }"></scs-paragraph>' +
-    '          <a href="#step-five" class="btn btn-lead btn-primary mt-4">Next step</a>'  +
-    '        </div>' +
+    '          <span class="mt-2"><scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId3\', \'data\': paragraphData3 } }"></scs-paragraph></span>' +
+    '        </a>' +
     '      </div>' +
     '    </div>' +
     '  </div>' +
     '</div>' +
     '<!-- /ko -->';
+
 
   // ----------------------------------------------
   // Define a Knockout ViewModel for your template
@@ -79,15 +52,43 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     self.id = args.id;
 
     // create the observables
+    self.imageWidth = ko.observable('200px');
     self.linkURL = ko.observable();
     self.linkText = ko.observable();
+    self.alignImage = ko.observable();
+    self.layout = ko.observable();
+    self.showTopLayout = ko.observable();
+    self.showStoryLayout = ko.observable();
 
 
     // handle initialization 
+    self.componentLayoutInitialized = ko.observable(false);
     self.customSettingsDataInitialized = ko.observable(false);
     self.initialized = ko.computed(function () {
-      return self.customSettingsDataInitialized();
+      return self.componentLayoutInitialized() && self.customSettingsDataInitialized();
     }, self);
+
+    // Style on left- or right-aligned image
+    self.imageStyle = ko.pureComputed(function () {
+      var style;
+      if (self.showTopLayout()) {
+        style = '';
+      } else {
+        style = 'flex-shrink:0;width:' + self.imageWidth() + ';';
+      }
+      return style;
+    });
+
+    // Style around paragraph component
+    self.paragraphStyle = ko.pureComputed(function () {
+      var style;
+      if (self.showTopLayout()) {
+        style = '';
+      } else {
+        style = 'flex-grow:1;';
+      }
+      return style;
+    });
 
     //
     // Raise the given trigger.
@@ -112,36 +113,85 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
       // get action and payload
       var payload = args.payload,
         action = args.action;
+
+      // handle 'setImageWidth' actions
+      if (action && action.actionName === 'setImageWidth') {
+        $.each(payload, function(index, data) {
+          if (data.name === 'imageWidth') {
+            self.imageWidth(data.value);
+          }
+        });
+      }
     };
 
     //
     // Seed nested component data
     //
-    self.imageData = {
+    self.imageData1 = {
+    };
+    self.imageData2 = {
+    };
+    self.imageData3 = {
     };
     self.titleData = {
     };
-    self.paragraphData = {
+    self.paragraphData1 = {
+    };
+    self.paragraphData2 = {
+    };
+    self.paragraphData3 = {
     };
 
     // 
     // Handle property changes
     //
+    self.updateComponentLayout = $.proxy(function (componentLayout) {
+      var layout = componentLayout ? componentLayout : 'default';
+      self.layout(layout);
+      self.alignImage(layout === 'right' ? 'right' : 'left');
+      self.showTopLayout(layout === 'top');
+      self.showStoryLayout(layout === 'default' || layout === 'right');
+
+      self.componentLayoutInitialized(true);
+    }, self);
     self.updateCustomSettingsData = $.proxy(function (customData) {
       if (customData) {
+        self.imageWidth(customData.width);
         self.linkURL(customData.linkURL);
         self.linkText(customData.nls && customData.nls.linkText);
       }
       self.customSettingsDataInitialized(true);
     }, self);
     self.updateSettings = function (settings) {
-      self.updateCustomSettingsData(settings.value);
+      if (settings.property === 'componentLayout') {
+        self.updateComponentLayout(settings.value);
+      } else if (settings.property === 'customSettingsData') {
+        self.updateCustomSettingsData(settings.value);
+      }
     };
 
     // listen for the EXECUTE ACTION request to handle custom actions
     SitesSDK.subscribe(SitesSDK.MESSAGE_TYPES.EXECUTE_ACTION, $.proxy(self.executeActionsListener, self));
     // listen for settings update
     SitesSDK.subscribe(SitesSDK.MESSAGE_TYPES.SETTINGS_UPDATED, $.proxy(self.updateSettings, self));
+
+
+    // Handle Copy Style (save customSettingsData to the clipboard)
+    self.copyComponentCustomData = function() {
+      return {
+        width: this.imageWidth()
+      };
+    };
+
+    // Handle Paste Style (apply customSettingsData from the clipboard)
+    self.pasteComponentCustomData = function(data) {
+      this.imageWidth(data.width);
+
+      // save data in page
+      SitesSDK.setProperty('customSettingsData', {
+        width: this.imageWidth()
+      });
+    };
 
     // listen for COPY_CUSTOM_DATA request
     SitesSDK.subscribe(SitesSDK.MESSAGE_TYPES.COPY_CUSTOM_DATA, $.proxy(self.copyComponentCustomData, self));
@@ -150,10 +200,12 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     SitesSDK.subscribe(SitesSDK.MESSAGE_TYPES.PASTE_CUSTOM_DATA, $.proxy(self.pasteComponentCustomData, self));
 
     //
-    // Initialize the customSettingsData values
+    // Initialize the componentLayout & customSettingsData values
     //
+    SitesSDK.getProperty('componentLayout', self.updateComponentLayout);
     SitesSDK.getProperty('customSettingsData', self.updateCustomSettingsData);
   };
+
 
   // ----------------------------------------------
   // Create a knockout based component implemention
@@ -205,7 +257,11 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
       // deal with each property changed
       $.each(args.properties, function (index, property) {
         if (property) {
-          self.viewModel.updateComponentData(property.value);
+          if (property.name === 'customSettingsData') {
+            self.viewModel.updateComponentData(property.value);
+          } else if (property.name === 'componentLayout') {
+            self.viewModel.updateLayout(property.value);
+          }
         }
       });
     }, this);

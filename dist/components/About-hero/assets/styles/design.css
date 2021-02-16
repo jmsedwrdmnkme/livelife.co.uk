@@ -1,0 +1,25 @@
+.about-hero {
+  background-image: url("data:image/svg+xml,%3Csvg width='1024' height='153' viewBox='0 0 1024 153' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 90C0 90 66 149 189.5 149C313 149 486 77 601.5 77C717 77 790 129.966 882.5 112C975 94.0337 1024 0 1024 0V152.5H0V90Z' fill='%23EBF6F3'/%3E%3C/svg%3E ");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+@media (max-width: 1023.98px) {
+  .about-hero::before {
+    content: '';
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #EBF6F3;
+    height: calc(50% + -5vw);
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-hero {
+    background-position: 50% 100.5%;
+    padding-bottom: 6rem !important;
+  }
+}

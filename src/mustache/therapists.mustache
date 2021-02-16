@@ -11,11 +11,17 @@
       therapistEntries[i].setAttribute('id', 'step-' + [i]);
 
       if (i % 2 == 0) {
+        therapistEntries[i].classList.add('left');
         therapistEntries[i].querySelector('.highlight-box').classList.add('highlight-box-left');
       } else {
+        therapistEntries[i].classList.add('right');
         therapistEntries[i].querySelector('.main').classList.remove('order-lg-1');
         therapistEntries[i].querySelector('.aside').classList.remove('order-lg-0');
         therapistEntries[i].querySelector('.highlight-box').classList.add('highlight-box-right');
+      }
+
+      if ((i + 1) == (therapistEntries.length)) {
+        therapistEntries[i].classList.add('last');
       }
     }
   }
