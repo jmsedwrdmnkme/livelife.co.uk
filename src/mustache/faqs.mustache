@@ -45,16 +45,16 @@
     input.addEventListener('keyup', (e) => {
       const match = new RegExp(`${e.target.value}`, 'gi');
       let results = namesList.filter(name => match.test(name.innerText));
+      let elem = document.querySelector('.accordion > span');
+      let searchVal = document.querySelector('#input').value;
+      let target = document.querySelector('.accordion > p:first-child');
       list.innerHTML = '';
 
       for (let i = 0; i < results.length; i++) { 
         list.appendChild(results[i])
         let totalFaqs = i + 1;
-        let elem = document.querySelector('.accordion > span');
-        let target = document.querySelector('.accordion > p:first-child');
-        let searchVal = document.querySelector('#input').value;
 
-        if (searchVal.length > 0) {
+        if (searchVal.length) {
           elem.innerText = totalFaqs + ' results for "' + searchVal + '"';
           target.innerText = 'Search results';
           target.parentNode.insertBefore(elem, target.nextSibling);
@@ -62,6 +62,11 @@
           elem.innerText = '';
           target.innerText = 'Top questions';
         }
+      }
+
+      let searchResults = 0 + list.childElementCount;
+      if (searchResults < 1) {
+        elem.innerText = 'No results for "' + searchVal + '", please try a different term.';
       }
     });
   }

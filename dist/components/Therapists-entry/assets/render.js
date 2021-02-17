@@ -20,7 +20,7 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData2 } }"></scs-paragraph>' +
     '        </div>' +
     '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId4\', \'data\': paragraphData4 } }"></scs-paragraph>' +
-    '        <a href="#" class="mt-4 btn btn-lead btn-primary">Book a free initial consultation</a>'  +
+    '        <a href="./get-started.html" class="mt-4 btn btn-lead btn-primary">Book a free initial consultation</a>'  +
     '      </div>' +
     '      <div class="aside col order-lg-0 mt-5 mt-lg-0">' +
     '        <div class="d-none d-lg-block mw-sm mx-5">' +

@@ -41,3 +41,10 @@
     right: -3rem;
   }
 }
+
+.accordion-item {
+  border-top: 1px solid #E8E8F5 !important;
+  border-bottom: 1px solid #E8E8F5 !important;
+  margin-top: -1px !important;
+  padding: 0.5rem 0 !important;
+}
