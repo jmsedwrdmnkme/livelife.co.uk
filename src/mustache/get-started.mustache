@@ -12,9 +12,20 @@
 </head>
 <body>
 
-<div id="slot-content" class="scs-slot scs-responsive"></div>
+<div class="container-fluid position-relative" id="onboardingComponent">
+  <div class="row">
+    <main id="onboarding" class="col-lg-8 order-lg-1 pt-4"></main>
+    <aside class="col-lg-3 text-center order-lg-0 pt-4"></aside>
+  </div>
+</div>
 
-<script src="/_themes/[!--$SCS_THEME_NAME--]/assets/js/scripts.js"></script>
+<script src="https://tp-opa--tst2.custhelp.com/web-determinations/staticresource/interviews.js"></script>
+<script>
+  var el = document.getElementById("onboarding");
+  var webDeterminationsUrl = "https://tp-opa--tst2.custhelp.com/web-determinations";
+  var deploymentName = "Livelife Contact Us plus Assessment1 Rev2";
+  OraclePolicyAutomationInterview.StartInterview(el, webDeterminationsUrl, deploymentName);
+</script>
 <script data-main="/_sitescloud/renderer/renderer.js" src="/_sitescloud/renderer/require.js"></script>
 <!--$SCS_SITE_FOOTER-->
 

@@ -1,0 +1,14 @@
+<div class="row blog-summary">
+  <div class="col-lg-6 mt-5">
+    <div class="rounded-3 position-relative height-100 overflow-hidden">
+      <a href="{{scsData.detailPageLink}}"><img src="{{blogImageRenditionURL}}" alt="{{blogTitle}} image"></a>
+    </div>
+  </div>
+  <div class="col-lg-6 py-3 mt-lg-5">
+    <a href="{{scsData.detailPageLink}}" class="text-decoration-none"><h3 class="fw-bolder">{{blogTitle}}</h3></a>
+    <p>Written by <span class="text-primary">{{blogAuthor}}</span> {{blogWrittenDateFormatted}}</p>
+    <div>
+      {{{blogSummary}}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<article id="blogPost" class="container-breakout pt-4 pt-lg-5">
+  <div class="container mx-auto">
+    <h1 class="h2">{{blogTitle}}</h1>
+    <small>Written by <span class="text-primary">{{blogAuthor}}</span> {{blogFormattedDate}}</small>
+    <div class="img-container rounded-3 overflow-hidden">
+      <img class="w-100" src="{{blogImageRenditionURL}}" alt="{{blogTitle}} image">
+    </div>
+    {{{blogContent}}}
+    <a href="./blog.html" onclick="window.history.go(-1); return false;" class="mt-5 btn btn-primary">Back to all articles</a>
+  </div>
+</article>
