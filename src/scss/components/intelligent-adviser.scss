@@ -18,14 +18,9 @@
 #onboardingComponent {
   overflow-x: hidden;
 
-  [role="button"] {
-    @extend .btn;
-    @extend .btn-primary;
-  }
-
-  [type="text"] {
-    @extend .form-control;
-  }
+ ~ iframe {
+   display: none;
+ }
 
   &::after {
     background-image: url("data:image/svg+xml,%3Csvg width='1024' height='165' viewBox='0 0 1024 165' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0C0 0 39.324 65.0611 99 79.0004C133.961 87.1666 180.504 57.2545 218 41C319.5 -3 425.5 77.765 510 79.0004C594.5 80.2357 622 21.5002 694 21.5002C766 21.5002 792.674 68.0656 863 79.0004C957.638 93.7155 1024 21.5002 1024 21.5002V164.5H0V0Z' fill='%23EBF6F3'/%3E%3C/svg%3E ");

@@ -75,6 +75,7 @@ function renderNav() {
 
     // Appending button style to final nav item in main nav
     navNodes[navNodes.length- 1].querySelector('a').classList.add('btn', 'btn-outline-primary');
+    navNodes[navNodes.length- 1].querySelector('a').setAttribute('target', '_blank');
   }
 }
 

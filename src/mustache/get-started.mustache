@@ -14,8 +14,12 @@
 
 <div class="container-fluid position-relative" id="onboardingComponent">
   <div class="row">
-    <main id="onboarding" class="col-lg-8 order-lg-1 pt-4"></main>
-    <aside class="col-lg-3 text-center order-lg-0 pt-4"></aside>
+    <main id="onboarding" class="col-lg-8 order-1 pt-4 pt-lg-5"></main>
+    <aside class="d-none d-lg-block col-3 text-center order-0 pt-5 px-4">
+      <img src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/livelife-logo.svg" alt="LiveLife logo" width="134" height="29">
+      <div class="aside-message my-5 fw-bold"></div>
+      <img src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/onboarding-aside.svg" alt="" width="183" height="209">
+    </aside>
   </div>
 </div>
 
@@ -25,6 +29,41 @@
   var webDeterminationsUrl = "https://tp-opa--tst2.custhelp.com/web-determinations";
   var deploymentName = "Livelife Contact Us plus Assessment1 Rev2";
   OraclePolicyAutomationInterview.StartInterview(el, webDeterminationsUrl, deploymentName);
+
+  function handleMessage(message) {
+    const asideText = document.querySelector('.aside-text');
+    const asidePlaceHolder = document.querySelector('.aside-message');
+    asidePlaceHolder.appendChild(asideText);
+
+    let messages = document.querySelectorAll('aside .aside-text');
+    for(var i = 0; i < messages.length; i++) {
+      if (i > 0) {
+        messages[0].parentNode.removeChild(messages[0]);
+      }
+    }
+
+    observer.observe(document, {
+      childList: true,
+      subtree: true
+    });
+  }
+
+  var observer = new MutationObserver(function (mutations, me) {
+    var message = document.querySelector('form');
+    if (message) {
+      setTimeout(() => {
+        handleMessage(message); 
+      }, 200);
+
+      me.disconnect();
+      return;
+    }
+  });
+
+  observer.observe(document, {
+    childList: true,
+    subtree: true
+  });
 </script>
 <script data-main="/_sitescloud/renderer/renderer.js" src="/_sitescloud/renderer/require.js"></script>
 <!--$SCS_SITE_FOOTER-->
