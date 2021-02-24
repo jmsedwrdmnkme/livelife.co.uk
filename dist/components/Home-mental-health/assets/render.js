@@ -20,22 +20,22 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '  </div>' +
     '</div>' +
     '<div class="container-breakout pb-5 home-mental-health-bottom position-relative">' +
-    '  <div class="container my-5">' +
+    '  <div class="container mt-lg-5 mb-5">' +
     '    <div class="row align-items-start justify-content-around text-center">' +
-    '      <div class="col-12 col-lg-3 mt-5">' +
-    '        <div class="mw-xs mx-auto">' +
+    '      <div class="col-12 col-lg-3 mt-lg-5">' +
+    '        <div class="mw-xs mx-auto mx-lg-5">' +
     '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData1 } }"></scs-image>' +
     '        </div>' +
     '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData2 } }"></scs-paragraph>' +
     '      </div>' +
     '      <div class="col-12 col-lg-3 mt-5">' +
-    '        <div class="mw-xs mx-auto">' +
+    '        <div class="mw-xs mx-auto mx-lg-5">' +
     '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData2 } }"></scs-image>' +
     '        </div>' +
     '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId3\', \'data\': paragraphData3 } }"></scs-paragraph>' +
     '      </div>' +
     '      <div class="col-12 col-lg-3 mt-5">' +
-    '        <div class="mw-xs mx-auto">' +
+    '        <div class="mw-xs mx-auto mx-lg-5">' +
     '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId3\', \'data\': imageData3 } }"></scs-image>' +
     '        </div>' +
     '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId4\', \'data\': paragraphData4 } }"></scs-paragraph>' +

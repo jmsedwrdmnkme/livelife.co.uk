@@ -1,5 +1,6 @@
 .therapists-nav {
   background-color: #FDF5F3;
+  margin-top: -1px !important;
 }
 
 .therapists-nav .card {
@@ -8,4 +9,19 @@
   background-position: 50% calc(100% - 1.5rem);
   padding-top: 2rem !important;
   padding-bottom: 2rem !important;
+}
+
+@media (max-width: 1023.98px) {
+  .therapists-nav .col-4.d-flex {
+    padding: 0.25rem !important;
+  }
+
+  .therapists-nav .col-4.d-flex .scs-paragraph-text strong,
+  .therapists-nav .col-4.d-flex .scs-paragraph-text em {
+    font-size: 0.8rem !important;
+  }
+
+  .therapists-nav .col-4.d-flex .scs-paragraph-text em {
+    font-weight: 600 !important;
+  }
 }

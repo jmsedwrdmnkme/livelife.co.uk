@@ -15,6 +15,7 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
+$gray-1000: #191A44 !default;
 $black:    #000 !default;
 
 // fusv-disable
@@ -27,7 +28,8 @@ $grays: (
   "600": $gray-600,
   "700": $gray-700,
   "800": $gray-800,
-  "900": $gray-900
+  "900": $gray-900,
+  "1000": $gray-1000
 ) !default;
 // fusv-enable
 
@@ -270,7 +272,7 @@ $enable-negative-margins:     true !default;
 // // Settings for the `<body>` element.
 //
 // $body-bg:                   $white !default;
-// $body-color:                $gray-900 !default;
+$body-color:                $gray-1000 !default;
 // $body-text-align:           null !default;
 //
 //
@@ -337,7 +339,7 @@ $container-max-widths: (
 // // Set the number of columns and specify the width of the gutters.
 //
 // $grid-columns:                12 !default;
-// $grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           2rem !default;
 // $grid-row-columns:            6 !default;
 //
 // $gutters: $spacers !default;
@@ -416,7 +418,7 @@ $font-size-base:              1.0625rem !default; // 17px
 // $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 // $font-weight-normal:          400 !default;
-$font-weight-bold:            600 !default;
+$font-weight-bold:            700 !default;
 $font-weight-bolder:          800 !default;
 //
 $font-weight-base:            $font-weight-light !default;
@@ -446,7 +448,7 @@ $font-sizes: (
 // $headings-margin-bottom:      $spacer / 2 !default;
 // $headings-font-family:        null !default;
 // $headings-font-style:         null !default;
-// $headings-font-weight:        500 !default;
+$headings-font-weight:        700 !default;
 // $headings-line-height:        1.2 !default;
 // $headings-color:              null !default;
 //
@@ -584,8 +586,8 @@ $font-sizes: (
 // //
 // // For each of Bootstrap's buttons, define text, background, and border color.
 //
-// $btn-padding-y:               $input-btn-padding-y !default;
-// $btn-padding-x:               $input-btn-padding-x !default;
+$btn-padding-y:               0.45rem !default;
+$btn-padding-x:               2.25rem !default;
 // $btn-font-family:             $input-btn-font-family !default;
 // $btn-font-size:               $input-btn-font-size !default;
 // $btn-line-height:             $input-btn-line-height !default;

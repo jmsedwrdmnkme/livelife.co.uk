@@ -6,7 +6,7 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
   // ----------------------------------------------
   var sampleComponentTemplate =
     '<!-- ko if: initialized -->' +
-    '<div class="container-breakout about-therapy py-5" id="step-1">' +
+    '<div class="container-breakout about-therapy pt-5 pb-3 pb-lg-5" id="step-1">' +
     '  <div class="container my-4">' +
     '    <div class="row">' +
     '      <div class="col-12">' +
@@ -51,9 +51,6 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '      </div>' +
     '      <div class="col mt-5">' +
     '        <div class="mw-sm mx-auto d-none d-lg-block">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData1 } }"></scs-image>' +
-    '        </div>' +
-    '        <div class="mw-xs mx-auto d-lg-none">' +
     '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData1 } }"></scs-image>' +
     '        </div>' +
     '      </div>' +

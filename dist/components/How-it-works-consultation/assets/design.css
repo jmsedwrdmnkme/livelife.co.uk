@@ -2,5 +2,5 @@
   background-image: url("data:image/svg+xml,%3Csvg width='1024' height='201' viewBox='0 0 1024 201' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0.5C0 0.5 72.659 106.134 161 115C244.685 123.399 332.387 81.3244 416.5 79.0887C541.48 75.7666 640.204 216.817 763.5 197C839.182 184.836 856.698 153.961 932.5 142.5C978.208 135.589 1024 182 1024 182V200.5H0V0.5Z' fill='%23FDF5F3'/%3E%3C/svg%3E "), linear-gradient(180deg, white 19.5vw, #FDF5F3 19.5vw);
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% 0.5%;
 }

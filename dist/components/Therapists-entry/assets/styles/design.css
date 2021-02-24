@@ -26,6 +26,17 @@ background-image: url("data:image/svg+xml,%3Csvg width='157' height='109' viewBo
   margin-bottom: 1.5rem !important;
 }
 
+@media (max-width: 1023.98px) {
+  .therapist-entry .highlight-box-left,
+  .therapist-entry .highlight-box-right {
+    background-color: #FCF0ED;
+    border-color: #FCF0ED;
+    padding: 1rem;
+    margin-left: -1rem;
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+
 @media (min-width: 1024px) {
   .therapist-entry .highlight-box-left,
   .therapist-entry .highlight-box-right {
@@ -43,4 +54,8 @@ background-image: url("data:image/svg+xml,%3Csvg width='157' height='109' viewBo
   .therapist-entry.last {
     padding-bottom: 10rem;
   }
+}
+
+.therapist-entry .highlight-box .scs-title .scs-title-text {
+  font-size: 1.2rem !important;
 }

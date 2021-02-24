@@ -1,9 +1,14 @@
 .scs-title {
   .scs-title-text {
     overflow: hidden !important;
-    font-size: $h2-font-size;
-    line-height: $headings-line-height;
-    font-weight: 800;
+    font-size: $h2-font-size !important;
+    line-height: $headings-line-height !important;
+    font-weight: $font-weight-bold !important;
+    font-family: Nunito, sans-serif !important;
+
+    * {
+      font-family: Nunito, sans-serif !important;
+    }
 
     // Fixes for inheriting container styles
     .text-center & div {

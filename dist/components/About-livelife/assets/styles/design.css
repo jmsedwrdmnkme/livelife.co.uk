@@ -5,6 +5,10 @@
   background-size: 100%;
 }
 
+.about-livelife .scs-paragraph-text > div:first-child strong {
+  font-size: 1.3rem !important;
+}
+
 @media (max-width: 1023.98px) {
   .about-livelife {
     padding-bottom: 20vw !important;

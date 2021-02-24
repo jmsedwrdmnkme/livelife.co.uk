@@ -14,7 +14,7 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData } }"></scs-image>' +
     '          </div>' +
     '        </div>' +
-    '        <div class="col-lg-7 order-lg-0 pt-4 pt-lg-0">' +
+    '        <div class="col-lg-8 order-lg-0 pt-4 pt-lg-0">' +
     '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId1\', \'data\': titleData } }"></scs-title>' +
     '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId1\', \'data\': paragraphData } }"></scs-paragraph>' +
     '          <a href="#step-two" class="btn btn-lead btn-primary mt-4">Go to step 2</a>'  +
@@ -28,7 +28,7 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData } }"></scs-image>' +
     '          </div>' +
     '        </div>' +
-    '        <div class="col-lg-7 pt-4 pt-lg-0">' +
+    '        <div class="col-lg-8 pt-4 pt-lg-0">' +
     '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId2\', \'data\': titleData } }"></scs-title>' +
     '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData } }"></scs-paragraph>' +
     '          <a href="#step-three" class="btn btn-lead btn-primary mt-4">Go to step 3</a>'  +
@@ -39,10 +39,10 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     '      <div class="row align-items-center pt-5 pt-lg-0 mt-lg-n5">' +
     '        <div class="col order-lg-1">' +
     '          <div class="mw-sm mx-auto">' +
-    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId3\', \'data\': imageData } }"></scs-image>' +
+    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId4\', \'data\': imageData } }"></scs-image>' +
     '          </div>' +
     '        </div>' +
-    '        <div class="col-lg-7 order-lg-0 pt-4 pt-lg-0">' +
+    '        <div class="col-lg-8 order-lg-0 pt-4 pt-lg-0">' +
     '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId3\', \'data\': titleData } }"></scs-title>' +
     '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId3\', \'data\': paragraphData } }"></scs-paragraph>' +
     '          <a href="#step-four" class="btn btn-lead btn-primary mt-4">Go to step 4</a>'  +
@@ -53,7 +53,7 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     '      <div class="row align-items-center pt-5 pt-lg-0 mt-lg-n5">' +
     '        <div class="col">' +
     '          <div class="mw-sm mx-auto">' +
-    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId4\', \'data\': imageData } }"></scs-image>' +
+    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId3\', \'data\': imageData } }"></scs-image>' +
     '          </div>' +
     '        </div>' +
     '        <div class="col-lg-7 pt-4 pt-lg-0">' +

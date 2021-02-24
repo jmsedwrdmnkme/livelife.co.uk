@@ -12,16 +12,36 @@
 }
 
 @media (max-width: 1023.98px) {
+  .home-therapists-top .quote-top * {
+    text-align: center !important;
+  }
+
   .home-therapists-bottom {
     background-image: linear-gradient(180deg, transparent 8vw, #FDF5F3 8vw);
+  }
+
+  .home-therapists-bottom .mx-xs {
+    max-width: 190px;
   }
 
   .home-therapists-bottom::before {
     top: -3.5vw;
   }
+
+  .home-therapists-bottom .highlight-mobile {
+    border-color: white;
+    background-color: white;
+    border-radius: 0 1rem 1rem 0;
+    padding: 1rem;
+    margin-left: -1rem;
+  }
 }
 
 @media (min-width: 1024px) {
+  .home-therapists-top .quote-top * {
+    text-align: right !important;
+  }
+
   .home-therapists-bottom {
     background-color: #FDF5F3;
   }

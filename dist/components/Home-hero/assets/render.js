@@ -28,16 +28,14 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '<div class="container-breakout py-5 pt-lg-0 home-hero-bottom text-center text-lg-start">' +
     '  <div class="container">' +
     '    <div class="row align-items-start">' +
-    '      <div class="col-lg-8">' +
+    '      <div class="col-10 col-lg-7 highlight-mobile pt-3 pt-lg-0">' +
     '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData2 } }"></scs-paragraph>' +
     '        <!-- ko if: linkText2 -->' +
     '          <a data-bind="attr: { href: linkURL2}" class="btn btn-lead btn-primary my-4"><span data-bind="text: linkText2"></span></a>'  +
     '        <!-- /ko -->' +
     '      </div>' +
     '      <div class="col d-none d-lg-block">' +
-    '        <div class="mt-n5">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData2 } }"></scs-image>' +
-    '        </div>' +
+    '        <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData2 } }"></scs-image>' +
     '      </div>' +
     '    </div>' +
     '  </div>' +

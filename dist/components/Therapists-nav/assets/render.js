@@ -9,26 +9,26 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '<div class="container-breakout pt-4 pb-5 position-relative therapists-nav">' +
     '  <div class="container position-relative">' +
     '    <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId\', \'data\': titleData } }"></scs-title>' +
-    '    <div class="row justify-content-center px-4 px-lg-0">' +
-    '      <div class="col-6 col-lg-4 d-flex">' +
+    '    <div class="row justify-content-center px-1 px-lg-0">' +
+    '      <div class="col-4 d-flex">' +
     '        <a href="#step-0" class="card w-100 p-3 my-3 mx-lg-3 text-center text-decoration-none text-dark">' +
-    '          <div class="col-10 col-lg-8 mx-auto">' +
+    '          <div class="col-11 col-lg-7 mx-auto">' +
     '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData1 } }"></scs-image>' +
     '          </div>' +
     '          <span class="mt-2"><scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId1\', \'data\': paragraphData1 } }"></scs-paragraph></span>' +
     '        </a>' +
     '      </div>' +
-    '      <div class="col-6 col-lg-4 d-flex">' +
+    '      <div class="col-4 d-flex">' +
     '        <a href="#step-1" class="card w-100 p-3 my-3 mx-lg-3 text-center text-decoration-none text-dark">' +
-    '          <div class="col-10 col-lg-8 mx-auto">' +
+    '          <div class="col-11 col-lg-7 mx-auto">' +
     '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData2 } }"></scs-image>' +
     '          </div>' +
     '          <span class="mt-2"><scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData2 } }"></scs-paragraph></span>' +
     '        </a>' +
     '      </div>' +
-    '      <div class="col-6 col-lg-4 d-flex">' +
+    '      <div class="col-4 d-flex">' +
     '        <a href="#step-2" class="card w-100 p-3 my-3 mx-lg-3 text-center text-decoration-none text-dark">' +
-    '          <div class="col-10 col-lg-8 mx-auto">' +
+    '          <div class="col-11 col-lg-7 mx-auto">' +
     '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId3\', \'data\': imageData3 } }"></scs-image>' +
     '          </div>' +
     '          <span class="mt-2"><scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId3\', \'data\': paragraphData3 } }"></scs-paragraph></span>' +

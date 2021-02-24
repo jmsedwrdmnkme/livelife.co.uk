@@ -1,15 +1,47 @@
 // Newsletter piece
 #newsletter {
   .opa-container-vertical {
-    display: flex !important;
+    @media (min-width: 670px) {
+      display: flex !important;
+    }
 
     .opa-control-item {
-      width: calc(100% / 3) !important;
+      width: 100% !important;
+
+      @media (min-width: 670px) {
+        width: calc(100% / 3) !important;
+      }
     }
 
     input {
       outline: none !important;
       border-bottom: 1px solid black !important;
+      max-width: inherit !important;
+    }
+  }
+
+  #opmlbl3,
+  #opmlbl3 + span {
+    display: none !important;
+  }
+
+  [role="button"] {
+    position: relative;
+    left: 50%;
+    display: inline-block !important;
+    transform: translateX(-50%);
+    color: #fff !important;
+    box-shadow: 4px 4px 15px rgba(120, 124, 200, 0.4) !important;
+    background-color: $purple !important;
+    border-color: $purple !important;
+    padding: 0.75rem 2.25rem !important;
+    font-size: 1.0625rem !important;
+    border-radius: .25rem !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+    font-weight: 400 !important;
+
+    &:hover {
+      background-color: black !important;
     }
   }
 }
@@ -98,8 +130,9 @@
           border-radius: 0 !important;
           padding: 0.1rem 0 !important;
 
+          &[style*="background-color: rgb(94, 102, 242);"],
           &:not([style*="background-color: rgb(94, 102, 242);"]) {
-            background-color: rgb(94, 102, 242) !important;
+            background-color: $purple !important;
           }
 
           &[style*="background-color: rgb(94, 102, 242);"] {
@@ -153,13 +186,15 @@
     outline: 0 !important;
     text-align: center !important;
     min-width: 5rem !important;
-    border: 1px solid rgb(94, 102, 242) !important;
+    border: 1px solid #A4A7E3 !important;
  
     &[style*="background-color: rgb(0, 152, 126);"] {
       background-color: #A4A7E3 !important;
     }
   }
 
+  [aria-labelledby="opmlbl66"] > *,
+  [aria-labelledby="opmlbl59"] > *,
   div[role="checkbox"] {
     border: 1px solid #a4a7e3!important;
     overflow: hidden!important;
@@ -194,6 +229,16 @@
       @media (min-width: 670px) {
         max-width: inherit !important;
       }
+    }
+  }
+
+  [role="button"][style*="box-shadow"] {
+    box-shadow: 4px 4px 15px rgba(#787CC8, 0.4) !important;
+  }
+
+  [role="button"][style*="background: rgb(94, 102, 242)"] {
+    &:not(:hover) {
+      background-color: $purple !important;
     }
   }
 }

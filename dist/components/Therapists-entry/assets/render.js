@@ -6,7 +6,7 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
   // ----------------------------------------------
   var sampleComponentTemplate =
     '<!-- ko if: initialized -->' +
-    '<div class="container-breakout therapist-entry mt-5 pt-5">' +
+    '<div class="container-breakout therapist-entry pt-4 pt-lg-0">' +
     '  <div class="container mt-5">' +
     '    <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId1\', \'data\': titleData1 } }"></scs-title>' +
     '    <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId1\', \'data\': paragraphData1 } }"></scs-paragraph>' +
@@ -20,15 +20,18 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData2 } }"></scs-paragraph>' +
     '        </div>' +
     '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId4\', \'data\': paragraphData4 } }"></scs-paragraph>' +
-    '        <a href="./get-started.html" class="mt-4 btn btn-lead btn-primary">Book a free initial consultation</a>'  +
+    '        <a href="./get-started.html" class="d-none d-lg-inline-block mt-4 btn btn-lead btn-primary">Book a free initial consultation</a>'  +
     '      </div>' +
     '      <div class="aside col order-lg-0 mt-5 mt-lg-0">' +
-    '        <div class="d-none d-lg-block mw-sm mx-5">' +
+    '        <div class="d-none d-lg-block mw-sm mx-5 px-3">' +
     '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId\', \'data\': imageData } }"></scs-image>' +
     '        </div>' +
     '        <div class="highlight-box mt-lg-5">' +
     '          <span class="subtitle"><scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId3\', \'data\': titleData3 } }"></scs-title></span>' +
     '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId3\', \'data\': paragraphData3 } }"></scs-paragraph>' +
+    '        </div>' +
+    '        <div class="text-center d-lg-none">'  +
+    '          <a href="./get-started.html" class="mt-4 btn btn-lead btn-primary">Book a free initial consultation</a>'  +
     '        </div>' +
     '      </div>' +
     '    </div>' +

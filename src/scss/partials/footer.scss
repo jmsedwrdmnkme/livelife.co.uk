@@ -11,4 +11,9 @@ footer {
       }
     }
   }
+
+  .bottom-0 {
+    bottom: inherit !important;
+    top: 10rem !important;
+  }
 }

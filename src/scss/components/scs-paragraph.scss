@@ -1,16 +1,33 @@
 .scs-paragraph {
   .scs-paragraph-text {
     margin-top: 1rem;
+    font-size: 17px !important;
+    font-family: Nunito, sans-serif !important;
+    color: inherit !important;
+
+    * {
+      font-family: Nunito, sans-serif !important;
+    }
+
+    p {
+      line-height: 1.5 !important;
+      font-size: 17px !important;
+      margin-bottom: 1rem !important;
+    }
 
     // Fixes for inheriting container styles
-    .text-center & div {
+    .text-center & *:not(ul):not(li) {
       text-align: center !important;
     }
 
-    .text-lg-start & div {
+    .text-lg-start & *:not(ul):not(li) {
       @include media-breakpoint-up(lg) {
         text-align: left !important;
       }
+    }
+
+    ul {
+      text-align: left !important;
     }
   }
 }

@@ -111,12 +111,16 @@ header {
       }
 
       &.active {
-        background-color: $purplemid;
+        background-color: white;
         border-radius: 2px;
       }
     }
 
     @include media-breakpoint-up(lg) {
+      &:not(:hover) {
+        color: #191A44 !important;
+      }
+
       &.active {
         font-weight: 800;
       }
@@ -124,8 +128,9 @@ header {
   }
 
   .btn { // Javascript appended styles for header button
-    padding: 0.2rem 1rem;
-    margin: 0.25rem 0 0.25rem 0.5rem;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    margin: 0 0 0 0.5rem;
 
     @include media-breakpoint-down(lg) {
       background-color: $purplemid;

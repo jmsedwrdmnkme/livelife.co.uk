@@ -1,4 +1,8 @@
 .scs-pagination {
+  @media (max-width: 1023.98px) {
+    justify-content: start !important;
+  }
+
   .loadMore {
     background: none !important;
     font-size: inherit !important;

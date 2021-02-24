@@ -9,11 +9,11 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '<div class="container-breakout pt-5 home-therapists-top">' +
     '  <div class="container">' +
     '    <div class="row">' +
-    '      <div class="col-12 text-center order-0">' +
+    '      <div class="col-12 quote-top order-0">' +
     '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId1\', \'data\': titleData1 } }"></scs-title>' +
     '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId1\', \'data\': paragraphData1 } }"></scs-paragraph>' +
     '      </div>' +
-    '      <div class="col-lg-7 text-center text-lg-start order-lg-2 mt-5">' +
+    '      <div class="col-lg-7 order-lg-2 mt-5">' +
     '        <div class="mw-sm d-lg-none mx-auto mb-5">' +
     '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData1 } }"></scs-image>' +
     '        </div>' +
@@ -24,7 +24,7 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '        <!-- /ko -->' +
     '      </div>' +
     '      <div class="col order-lg-1 mt-5">' +
-    '        <div class="d-none d-lg-block mb-4">' +
+    '        <div class="d-none d-lg-block mb-4 me-4">' +
     '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData1 } }"></scs-image>' +
     '        </div>' +
     '        <div class="highlight-box-left">' +
@@ -40,8 +40,8 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '<div class="container-breakout pb-5 mt-lg-n3 home-therapists-bottom position-relative">' +
     '  <div class="container">' +
     '    <div class="row mt-5">' +
-    '      <div class="col-lg-6 text-center">' +
-    '        <div class="mx-auto mw-xs mb-4">' +
+    '      <div class="col-lg-6 pe-lg-5 text-center text-lg-start">' +
+    '        <div class="mw-xs mb-4 mx-auto mx-lg-0">' +
     '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData2 } }"></scs-image>' +
     '        </div>' +
     '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId3\', \'data\': titleData3 } }"></scs-title>' +
@@ -50,12 +50,16 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '          <a class="mt-4 btn btn-lead btn-primary" data-bind="attr: { href: linkURL2}"><span data-bind="text: linkText2"></span></a>'  +
     '        <!-- /ko -->' +
     '      </div>' +
-    '      <div class="col-lg-6 text-center mt-5 mt-lg-0">' +
-    '        <div class="mx-auto mw-xs mb-4">' +
+    '      <div class="col-12 col-lg-6 ps-lg-5 mt-5 mt-lg-0">' +
+    '        <div class="mw-xs mb-4 mx-auto mx-lg-0">' +
     '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId3\', \'data\': imageData3 } }"></scs-image>' +
     '        </div>' +
-    '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId4\', \'data\': titleData4 } }"></scs-title>' +
-    '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId5\', \'data\': paragraphData5 } }"></scs-paragraph>' +
+    '        <div class="text-center text-lg-start">' +
+    '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId4\', \'data\': titleData4 } }"></scs-title>' +
+    '        </div>' +
+    '        <div class="highlight-mobile mt-4 mt-lg-0 col-11 col-lg-12">' +
+    '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId5\', \'data\': paragraphData5 } }"></scs-paragraph>' +
+    '        </div>' +
     '      </div>' +
     '      <div class="col-12 text-center mt-5 py-4">' +
     '        <div id="quotes" class="carousel slide pb-5" data-bs-ride="carousel">' +

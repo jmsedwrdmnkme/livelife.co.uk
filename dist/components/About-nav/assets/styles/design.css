@@ -9,3 +9,13 @@
   padding-top: 2rem !important;
   padding-bottom: 2rem !important;
 }
+
+@media (max-width: 1023.98px) {
+  .about-nav .col-4.col-lg-3.d-flex {
+    padding: 0.25rem;
+  }
+
+  .about-nav .col-4.col-lg-3.d-flex strong {
+    font-size: 0.8rem;
+  }
+}
