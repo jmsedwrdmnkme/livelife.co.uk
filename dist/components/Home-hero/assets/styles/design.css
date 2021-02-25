@@ -22,8 +22,13 @@
 
 @media (min-width: 1024px) {
   .home-hero-top {
-    padding-bottom: 13rem !important;
+    overflow: hidden !important;
+    padding-bottom: calc(3rem + 15vw) !important;
     background-position: 50% calc(100% + 98vw);
     background-size: 100%;
+  }
+
+  .home-hero-bottom .mt-lg-n5 {
+    margin-top: -5rem !important;
   }
 }

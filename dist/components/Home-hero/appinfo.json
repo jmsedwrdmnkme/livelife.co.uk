@@ -96,6 +96,16 @@
       "marginTop": 0
     }
     }, {
+    "id": "titleId2",
+    "type": "scs-title",
+    "data": {
+      "userText": "<div>Local Component</div>",
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0
+    }
+    }, {
     "id": "paragraphId1",
     "type": "scs-paragraph",
     "data": {
