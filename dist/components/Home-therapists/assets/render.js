@@ -62,25 +62,10 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '        </div>' +
     '      </div>' +
     '      <div class="col-12 text-center mt-5 py-4">' +
-    '        <div id="quotes" class="carousel slide pb-5" data-bs-ride="carousel">' +
-    '          <div class="carousel-indicators">' +
-    '            <button type="button" data-bs-target="#quotes" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>' +
-    '            <button type="button" data-bs-target="#quotes" data-bs-slide-to="1" aria-label="Slide 2"></button>' +
-    '            <button type="button" data-bs-target="#quotes" data-bs-slide-to="2" aria-label="Slide 3"></button>' +
-    '          </div>' +
-    '          <div class="carousel-inner">' +
-    '            <div class="carousel-item active">' +
-    '              <p class="h1">"100,000 more people\'s mental health supported, that’s our aim"</p>' +
-    '              <p><em>Darren Woodward, LiveLife Principle UKCP, UKRC, BACP</em></p>' +
-    '            </div>' +
-    '            <div class="carousel-item">' +
-    '              <p class="h1">"100,000 more people\'s mental health supported, that’s our aim"</p>' +
-    '              <p><em>Darren Woodward, LiveLife Principle UKCP, UKRC, BACP</em></p>' +
-    '            </div>' +
-    '            <div class="carousel-item">' +
-    '              <p class="h1">"100,000 more people\'s mental health supported, that’s our aim"</p>' +
-    '              <p><em>Darren Woodward, LiveLife Principle UKCP, UKRC, BACP</em></p>' +
-    '            </div>' +
+    '        <div id="quotes" class="carousel slide pb-5">' +
+    '          <div class="carousel-item active">' +
+    '            <p class="h1">"100,000 more people\'s mental health supported, that’s our aim"</p>' +
+    '            <p><em>Darren Woodward, LiveLife Principle UKCP, UKRC, BACP</em></p>' +
     '          </div>' +
     '        </div>' +
     '      </div>' +
