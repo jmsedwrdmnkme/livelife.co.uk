@@ -6,7 +6,7 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
   // ----------------------------------------------
   var sampleComponentTemplate = 
     '<!-- ko if: initialized -->' +
-    '<div class="container-breakout pt-5 home-mental-health-top">' +
+    '<div class="container-breakout pt-lg-5 home-mental-health-top">' +
     '  <div class="container my-5">' +
     '    <div class="row align-items-start justify-content-around text-center">' +
     '      <div class="col-12">' +

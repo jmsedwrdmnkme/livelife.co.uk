@@ -6,16 +6,18 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
   // ----------------------------------------------
   var sampleComponentTemplate =
     '<!-- ko if: initialized -->' +
-    '<div class="container-breakout about-livelife py-5 text-center text-lg-start" id="step-0">' +
+    '<div class="container-breakout about-livelife py-5" id="step-0">' +
     '  <div class="container my-4">' +
     '    <div class="row justify-content-between">' +
-    '      <div class="col-12">' +
+    '      <div class="col-12 text-center text-lg-start">' +
     '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId\', \'data\': titleData } }"></scs-title>' +
     '      </div>' +
-    '      <div class="col-lg-6 mt-3">' +
+    '      <div class="col-lg-6 mt-3 text-center text-lg-start">' +
     '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId1\', \'data\': paragraphData1 } }"></scs-paragraph>' +
     '        <div class="mw-sm mt-5 mx-auto">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId\', \'data\': imageData } }"></scs-image>' +
+    '          <div class="mx-5 mx-lg-0">' +
+    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId\', \'data\': imageData } }"></scs-image>' +
+    '          </div>' +
     '        </div>' +
     '      </div>' +
     '      <div class="col-lg-5 mt-3">' +

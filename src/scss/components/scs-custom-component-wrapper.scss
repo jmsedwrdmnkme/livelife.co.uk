@@ -9,3 +9,8 @@
 [style*="margin-top:5px"] {
   margin: 0 !important;
 }
+
+.scs-cookie-consent,
+iframe[src*="javascript:false"] {
+  display: none !important;
+}

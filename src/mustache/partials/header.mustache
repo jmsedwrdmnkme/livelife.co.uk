@@ -12,6 +12,8 @@
 </head>
 <body>
 
+<a class="visually-hidden-focusable" href="#main">Skip to main content</a>
+
 <div class="d-none">{{> ./sprite }}</div>
 
 <header class="bg-white sticky-top">
@@ -20,7 +22,6 @@
   <div class="container-fluid">
     <a class="navbar-brand" aria-current="page" href="./">
       <img src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/livelife-logo.svg" alt="LiveLife logo" width="134" height="29">
-      <h1 class="visually-hidden">Livelife</h1>
     </a>
     <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon">
@@ -33,4 +34,4 @@
 
 </header>
 
-<main>
+<main id="main">

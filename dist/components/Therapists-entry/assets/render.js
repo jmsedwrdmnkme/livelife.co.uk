@@ -13,7 +13,9 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '    <div class="row mt-5">' +
     '      <div class="main col-lg-7 order-lg-1">' +
     '        <div class="d-lg-none mw-sm mx-auto pb-4">' +
-    '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId\', \'data\': imageData } }"></scs-image>' +
+    '          <div class="mx-5">' +
+    '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId\', \'data\': imageData } }"></scs-image>' +
+    '          </div>' +
     '        </div>' +
     '        <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId2\', \'data\': titleData2 } }"></scs-title>' +
     '        <div class="mt-n2 mb-4">' +

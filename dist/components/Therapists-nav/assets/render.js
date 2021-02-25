@@ -9,7 +9,7 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '<div class="container-breakout pt-4 pb-5 position-relative therapists-nav">' +
     '  <div class="container position-relative">' +
     '    <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId\', \'data\': titleData } }"></scs-title>' +
-    '    <div class="row justify-content-center px-1 px-lg-0">' +
+    '    <div class="row justify-content-center px-1 px-lg-0 mt-4">' +
     '      <div class="col-4 d-flex">' +
     '        <a href="#step-0" class="card w-100 p-3 my-3 mx-lg-3 text-center text-decoration-none text-dark">' +
     '          <div class="col-11 col-lg-7 mx-auto">' +

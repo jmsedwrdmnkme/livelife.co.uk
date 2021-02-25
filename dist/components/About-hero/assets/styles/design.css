@@ -12,7 +12,7 @@
     bottom: 0;
     position: absolute;
     background-color: #EBF6F3;
-    height: calc(70% + -5vw);
+    height: calc(70% + -10vw);
     width: 100%;
   }
 }

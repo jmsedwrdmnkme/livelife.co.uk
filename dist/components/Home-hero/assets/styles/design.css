@@ -10,7 +10,7 @@
 
 @media (max-width: 1023.98px) {
   .home-hero-top {
-    background-position: 50% calc(50% + 43vw);
+    background-position: 50% calc(15rem - 5vw);
   }
 
   .home-hero-bottom [class*="highlight-mobile"] {

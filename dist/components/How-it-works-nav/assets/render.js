@@ -13,7 +13,7 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     '    <div class="row justify-content-between px-4 px-lg-0">' +
     '      <div class="col-6 col-lg-3 d-flex">' +
     '        <a href="#step-one" class="card w-100 p-3 my-lg-3 mx-lg-3 text-center text-decoration-none text-dark">' +
-    '          <div class="col-9 col-lg-6 mx-auto">' +
+    '          <div class="col-6 col-lg-6 mx-auto">' +
     '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData } }"></scs-image>' +
     '          </div>' +
     '          <strong class="mt-1">1. Online self-assessment</strong>' +
@@ -21,7 +21,7 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     '      </div>' +
     '      <div class="col-6 col-lg-3 d-flex">' +
     '        <a href="#step-two" class="card w-100 p-3 my-lg-3 mx-lg-3 text-center text-decoration-none text-dark">' +
-    '          <div class="col-9 col-lg-6 mx-auto">' +
+    '          <div class="col-6 col-lg-6 mx-auto">' +
     '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData } }"></scs-image>' +
     '          </div>' +
     '          <strong class="mt-2">2. Book a consultation</strong>' +
@@ -29,7 +29,7 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     '      </div>' +
     '      <div class="col-6 col-lg-3 d-flex">' +
     '        <a href="#step-three" class="card w-100 p-3 my-lg-3 mx-lg-3 text-center text-decoration-none text-dark">' +
-    '          <div class="col-9 col-lg-6 mx-auto">' +
+    '          <div class="col-6 col-lg-6 mx-auto">' +
     '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId3\', \'data\': imageData } }"></scs-image>' +
     '          </div>' +
     '          <strong class="mt-2">3. Talk with a therapist</strong>' +
@@ -37,7 +37,7 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
     '      </div>' +
     '      <div class="col-6 col-lg-3 d-flex">' +
     '        <a href="#step-four" class="card w-100 p-3 my-lg-3 mx-lg-3 text-center text-decoration-none text-dark">' +
-    '          <div class="col-9 col-lg-6 mx-auto">' +
+    '          <div class="col-6 col-lg-6 mx-auto">' +
     '            <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId4\', \'data\': imageData } }"></scs-image>' +
     '          </div>' +
     '          <strong class="mt-2">4. Start receiving therapy</strong>' +

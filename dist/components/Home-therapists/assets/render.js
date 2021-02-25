@@ -23,8 +23,8 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '          <a class="mt-4 btn btn-lead btn-primary d-none d-lg-inline-block" data-bind="attr: { href: linkURL1}"><span data-bind="text: linkText1"></span></a>'  +
     '        <!-- /ko -->' +
     '      </div>' +
-    '      <div class="col order-lg-1 mt-5">' +
-    '        <div class="d-none d-lg-block mb-4 me-4">' +
+    '      <div class="col order-lg-1 mt-4 mt-lg-5">' +
+    '        <div class="d-none d-lg-block mb-4 mx-4">' +
     '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId1\', \'data\': imageData1 } }"></scs-image>' +
     '        </div>' +
     '        <div class="highlight-box-left">' +
@@ -37,9 +37,9 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '    </div>' +
     '  </div>' +
     '</div>' +
-    '<div class="container-breakout pb-5 mt-lg-n3 home-therapists-bottom position-relative">' +
+    '<div class="container-breakout pb-5 home-therapists-bottom position-relative">' +
     '  <div class="container">' +
-    '    <div class="row mt-5">' +
+    '    <div class="row mt-5 pt-lg-5">' +
     '      <div class="col-lg-6 pe-lg-5 text-center text-lg-start">' +
     '        <div class="mw-xs mb-4 mx-auto mx-lg-0">' +
     '          <scs-image params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'imageId2\', \'data\': imageData2 } }"></scs-image>' +

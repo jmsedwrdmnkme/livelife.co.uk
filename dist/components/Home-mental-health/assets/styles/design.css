@@ -19,3 +19,7 @@
 .home-mental-health-bottom {
   background-image: linear-gradient(180deg, transparent calc(11.65vw + 5rem), #F5F6FE calc(11.65vw + 5rem))
 }
+
+.home-mental-health-bottom strong {
+  font-weight: 600 !important;
+}

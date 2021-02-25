@@ -16,15 +16,15 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '    </div>' +
     '    <div class="row justify-content-between">' +
     '      <div class="col-lg-5 mt-5 order-lg-2">' +
-    '        <div class="card tables p-3 text-center">' +
+    '        <div class="card tables p-3 mx-4 mx-lg-0 text-center">' +
     '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId4\', \'data\': titleData4 } }"></scs-title>' +
     '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId4\', \'data\': paragraphData4 } }"></scs-paragraph>' +
     '        </div>' +
-    '        <div class="card tables p-3 text-center mt-4">' +
+    '        <div class="card tables p-3 mx-4 mx-lg-0 text-center mt-4">' +
     '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId5\', \'data\': titleData5 } }"></scs-title>' +
     '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId5\', \'data\': paragraphData5 } }"></scs-paragraph>' +
     '        </div>' +
-    '        <div class="card tables p-3 text-center mt-4">' +
+    '        <div class="card tables p-3 mx-4 mx-lg-0 text-center mt-4">' +
     '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId6\', \'data\': titleData6 } }"></scs-title>' +
     '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId6\', \'data\': paragraphData6 } }"></scs-paragraph>' +
     '        </div>' +
@@ -33,7 +33,7 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '        </div>' +
     '      </div>' +
     '      <div class="col-lg-6 mt-5 order-lg-1">' +
-    '        <div class="card coloured p-4 py-lg-5">' +
+    '        <div class="shadow-none card coloured p-4 py-lg-5">' +
     '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId2\', \'data\': titleData2 } }"></scs-title>' +
     '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId2\', \'data\': paragraphData2 } }"></scs-paragraph>' +
     '          <scs-title params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'titleId3\', \'data\': titleData3 } }"></scs-title>' +

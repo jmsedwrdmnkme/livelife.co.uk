@@ -16,11 +16,11 @@
     }
 
     // Fixes for inheriting container styles
-    .text-center & *:not(ul):not(li) {
+    .text-center & *:not(ul):not(li):not(td) {
       text-align: center !important;
     }
 
-    .text-lg-start & *:not(ul):not(li) {
+    .text-lg-start & *:not(ul):not(li):not(td) {
       @include media-breakpoint-up(lg) {
         text-align: left !important;
       }

@@ -55,3 +55,8 @@
     border-color: #DE744D;
   }
 }
+
+.home-therapists-top .highlight-box-left strong {
+  margin-bottom: -2.5rem !important;
+  display: block;
+}

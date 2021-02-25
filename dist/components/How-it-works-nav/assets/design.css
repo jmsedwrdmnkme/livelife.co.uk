@@ -11,7 +11,12 @@
   }
 
   .how-it-works-nav .col-6.col-lg-3.d-flex strong {
-    font-size: 0.8rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .how-it-works-nav .card {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
   }
 }
 

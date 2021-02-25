@@ -6,6 +6,7 @@ define(['knockout', 'jquery', 'css!./design.css'], function (ko, $) {
   // ----------------------------------------------
   var sampleComponentTemplate =
     '<!-- ko if: initialized -->' +
+    '<h1 class="visually-hidden">How it works</h1>' +
     '<div class="container-breakout py-4 position-relative how-it-works-hero">' +
     '  <div class="container position-relative">' +
     '    <div class="row justify-content-between">' +
