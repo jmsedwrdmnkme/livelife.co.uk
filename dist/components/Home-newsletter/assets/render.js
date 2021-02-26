@@ -14,9 +14,9 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '        <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId\', \'data\': paragraphData } }"></scs-paragraph>' +
     '        <div id="newsletter" class="mt-5"></div>' +
     '        <small class="text-lg-start d-block ms-lg-4 mt-4 mt-lg-n5 position-relative">' +
-    '          <a class="decoration-underline me-2" href="./privacy.html">Privacy</a>' +
-    '          <a class="decoration-underline me-2" href="./terms-and-conditions.html">T&amp;C\'s</a>' +
-    '          <a class="decoration-underline" href="./cookie-notice.html">Confidentiality</a>' +
+    '          <a class="decoration-underline me-2" href="./privacy">Privacy</a>' +
+    '          <a class="decoration-underline me-2" href="./terms-and-conditions">T&amp;C\'s</a>' +
+    '          <a class="decoration-underline" href="./livelife-cookie-policy">Confidentiality</a>' +
     '        </small>' +
     '      </div>' +
     '    </div>' +

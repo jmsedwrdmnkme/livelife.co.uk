@@ -14,3 +14,8 @@ h3,
 b, strong {
   font-weight: $font-weight-bold !important;
 }
+
+[style*="#212529"],
+[style*="#333333"] {
+  color: #191A44 !important
+}

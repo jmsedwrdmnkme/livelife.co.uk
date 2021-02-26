@@ -104,14 +104,14 @@ if (document.addEventListener) {
 
 // Nav active class based on page URL
 window.onload = function() { 
-  var all_links = document.querySelectorAll('.nav-link'),
-    i=0, len=all_links.length,
-    full_path = location.href.split('#')[0]; // Ignore hashes
-
-  // Loop through each link.
-  for(; i<len; i++) {
-    if(all_links[i].href.split("#")[0] == full_path) {
-      all_links[i].className += " active";
+  var url = location.href.split("/"); //replace string with location.href
+  var navLinks = document.querySelectorAll('.nav-link');
+  var i=0;
+  var currentPage = url[url.length - 1];
+  for(i;i<navLinks.length;i++){
+    var lb = navLinks[i].href.split("/");
+    if(lb[lb.length-1] == currentPage) {
+      navLinks[i].className = "active";
     }
   }
 };
