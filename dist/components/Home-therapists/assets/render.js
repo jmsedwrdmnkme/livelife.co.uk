@@ -64,8 +64,8 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '      <div class="col-12 text-center mt-5 py-4">' +
     '        <div id="quotes" class="carousel slide pb-5">' +
     '          <div class="carousel-item active">' +
-    '            <p class="h1">"100,000 more people\'s mental health supported, that’s our aim"</p>' +
-    '            <p><em>Darren Woodward, LiveLife Principle UKCP, UKRC, BACP</em></p>' +
+    '            <p class="h1">"My therapist supported me to face things I never have, and gave me the confidence to move forward. Truly life-saving."</p>' +
+    '            <p><em>Therapy client</em></p>' +
     '          </div>' +
     '        </div>' +
     '      </div>' +
