@@ -33,7 +33,7 @@ define(['knockout', 'jquery', 'css!./styles/design.css'], function (ko, $, css) 
     '          <scs-paragraph params="{ scsComponent: { \'renderMode\': mode, \'parentId\': id, \'id\': \'paragraphId3\', \'data\': paragraphData3 } }"></scs-paragraph>' +
     '        </div>' +
     '        <div class="text-center d-lg-none">'  +
-    '          <a href="./get-started.html" class="mt-4 btn btn-lead btn-primary">Book a free initial consultation</a>'  +
+    '          <a href="./get-started" class="mt-4 btn btn-lead btn-primary">Book a free initial consultation</a>'  +
     '        </div>' +
     '      </div>' +
     '    </div>' +
