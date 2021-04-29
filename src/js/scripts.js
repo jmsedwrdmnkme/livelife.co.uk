@@ -73,9 +73,8 @@ function renderNav() {
       footernav.appendChild(navNodes[i].cloneNode(true));
     }
 
-    // Appending button style to final nav item in main nav
-    navNodes[navNodes.length- 1].querySelector('a').classList.add('btn', 'btn-outline-primary');
-    navNodes[navNodes.length- 1].querySelector('a').setAttribute('target', '_blank');
+    // Appending onbaording modal button to end of nav
+    navNodes[navNodes.length- 1].insertAdjacentHTML('afterend', '<li class="nav-item"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#onboardingModal">Get started</button></li>');
 
     // Appending /home to /
     var homeNavItem = topnav.querySelector('a[href^="/home"]');
