@@ -120,3 +120,9 @@ window.onload = function() {
     }
   }
 };
+
+// Onboarding piece load
+var el = document.getElementById("onboarding");
+var webDeterminationsUrl = "https://tp-opa--tst2.custhelp.com/web-determinations";
+var deploymentName = "Livelife Contact Us plus Assessment1 Rev2";
+OraclePolicyAutomationInterview.StartInterview(el, webDeterminationsUrl, deploymentName);
