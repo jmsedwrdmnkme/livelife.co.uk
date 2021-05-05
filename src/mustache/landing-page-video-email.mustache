@@ -17,24 +17,16 @@
 <div class="d-none">{{> ./sprite }}</div>
 
 <header class="bg-white sticky-top">
-  <a class="bg-blue-light text-decoration-none d-block d-lg-none text-center py-1 px-3" href="tel:00443005550788">Call us: 0300 5550788 9AM-9PM</a>
-  <nav class="navbar navbar-expand-lg navbar-light px-2 p-lg-3 shadow-sm mb-3">
+  <a class="bg-blue-light nav-link justify-content-center icon-telephone d-block d-lg-none py-1 px-3" href="tel:00443005550788">Call us: 0300 5550788 9AM-9PM</a>
+  <nav class="navbar navbar-expand navbar-light px-2 p-lg-3 shadow-sm mb-3">
     <div class="container-fluid">
       <a class="navbar-brand" aria-current="page" href="./">
         <img src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/livelife-logo.svg" alt="LiveLife logo" width="134" height="29">
       </a>
-      <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">
-          <span class="close">&times;</span>
-        </span>
-      </button>
-      <div class="navbar-collapse offcanvas-collapse justify-content-end">
-        <ul class="navbar-nav align-items-center">
+      <div class="justify-content-end">
+        <ul class="navbar-nav align-items-center pt-0">
           <li class="nav-item">
-            <a href="/" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item d-none d-lg-block">
-            <a href="tel:00443005550788" class="nav-link">Call us: 0300 5550788 9AM-9PM</a>
+            <a href="tel:00443005550788" class="nav-link icon-telephone">Call us: 0300 5550788 9AM-9PM</a>
           </li>
           <li class="nav-item">
             <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#onboardingModal">Request free consultation</button>
@@ -61,7 +53,9 @@
         <div id="component-email">
           <h2 class="text-center">Struggling with your mental health? <span class="d-block fw-light">Complete the form below to request a free consultation</span></h2>
           <div class="row mt-4">
-            <div class="d-none d-lg-block col-lg-2"></div>
+            <div class="d-none d-lg-block col-lg-2">
+              <img class="w-100" src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/lander-email-illustration.svg" alt="">
+            </div>
             <div class="col-12 col-lg-8">
               <form class="row g-3">
                 <div class="col-lg">
@@ -81,7 +75,9 @@
                 </div>
               </form>
             </div>
-            <div class="d-none d-lg-block col-lg-2"></div>
+            <div class="d-none d-lg-block col-lg-2">
+              <img class="w-100" src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/lander-email-illustration-2.svg" alt="">
+            </div>
           </div>
         </div>
       <!-- Email component ends -->
@@ -128,12 +124,12 @@
     </div>
   </div>
 
-  <div class="pt-5 overflow-hidden bg-pink">
+  <div class="pt-5 bg-pink">
     <div class="container">
       <div class="row align-items-end">
-        <p class="h2 scs-title mb-4 col d-lg-none"><strong>Benefits</strong> of livelife</p>
-        <div class="col-3 col-lg-5">
-          ICON HERE
+        <p class="h2 scs-title mb-4 col-auto d-lg-none"><strong>Benefits</strong> of livelife</p>
+        <div class="col text-end">
+          <img class="img-fluid illustration me-lg-n5 mb-n4" src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/lander-email-illustration-3.svg" alt="">
         </div>
         <div class="col-11 col-lg-7">
           <div class="card shadow-none pt-4 pe-3 px-lg-5 pb-4 pb-lg-5 mb-n1">
@@ -187,26 +183,48 @@
 </main>
 
 <div class="modal fade" id="onboardingModal" tabindex="-1" aria-labelledby="onboardingModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-fullscreen-lg-down" id="onboardingComponent">
-    <div class="modal-content">
-      <div class="modal-header">
-        <p class="h5 modal-title" id="onboardingModalLabel">Get started</p>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div id="onboarding">
+  <div class="modal-dialog modal-lg modal-fullscreen-lg-down" id="onboardingComponent">
+    <div class="modal-content p-4 p-lg-5">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <img src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/lander-email-illustration.svg" alt="">
+          <p class="mt-3 h2 fw-light">Struggling with your <strong>mental health?</strong></p>
+          <p>Complete the form below to request a free consultation</p>
+          <button type="button" class="btn-close position-absolute top-0 end-0 me-2 mt-2 me-lg-3 mt-lg-3" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <form class="col-12 row g-3">
+          <div class="col-lg">
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col-lg">
+            <input type="text" class="form-control" placeholder="Last name">
+          </div>
+          <div class="col-12">
+            <input type="email" class="form-control" placeholder="Email address">
+          </div>
+          <div class="col-12">
+            <small>Please read our <a href="#">Privacy Policy</a> and our <a href="#">Terms &amp; Conditions</a> so that you understand how we will use your data.</small>
+          </div>
+          <div class="col-12 text-center mt-4">
+            <button type="submit" class="btn btn-primary">Request free consultation</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </div>
 
+<div class="d-none">
+  <div data-bs-toggle="offcanvas"></div>
+</div>
+
 <style>
   /* Colours */
   :root {
-    --pink:         #FCF0ED;
-    --teal:         #EBF6F3;
-    --blue-light:   #F5F6FE;
+    --pink:         #fcf0ed;
+    --teal:         #ebf6f3;
+    --blue-light:   #f5f6fe;
+    --purple:       #6e72bb;
   }
 
   /* Backgrounds */
@@ -220,6 +238,49 @@
 
   .bg-blue-light {
     background-color: var(--blue-light);
+  }
+
+  /* Navbar */
+  header .btn:not(:hover) {
+    border-color: var(--purple) !important;
+    background-color: inherit !important;
+  }
+
+  @media (max-width: 1023.98px) {
+    header .btn {
+      font-size: 0.8rem;
+      padding: .2rem 0.75rem !important;
+      margin-right: -0.5rem;
+      margin-bottom: -0.2rem;
+    }
+  }
+
+  .icon-telephone::before {
+    content: '';
+    display: inline-block;
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.7532 18.3788C24.039 18.3788 22.3558 18.1107 20.7607 17.5836C19.9791 17.317 19.0183 17.5615 18.5413 18.0515L15.393 20.4281C11.7418 18.4791 9.49278 16.2308 7.57041 12.6071L9.87712 9.54078C10.4764 8.94228 10.6914 8.06801 10.4338 7.2477C9.90446 5.64426 9.63555 3.96185 9.63555 2.24685C9.63562 1.00793 8.6277 0 7.38885 0H2.24678C1.00792 0 0 1.00793 0 2.24678C0 16.4473 11.5527 28 25.7532 28C26.9921 28 28 26.9921 28 25.7532V20.6255C27.9999 19.3867 26.992 18.3788 25.7532 18.3788Z' fill='%23191A44'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1rem;
+    position: relative;
+    top: 0.2rem;
+  }
+
+  .nav-link::after {
+    content: inherit !important; 
+  }
+
+  @media (max-width: 1023.98px) {
+    .nav-item:first-child {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .nav-item:first-child {
+      display: block !important;
+    }
   }
 
   /* Hero */
@@ -263,6 +324,25 @@
   @media (min-width: 1024px) {
     .card::after {
       left: calc(100% - 3px );
+    }
+  }
+
+  /* Accordion */
+  .accordion-item {
+    border-bottom: 1px solid #E8E8F5 !important;
+    padding: 0.5rem 0 !important;
+  }
+
+  /* Illustration piece */
+  .illustration {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 1023.98px) {
+    .illustration {
+      width: 6.5rem;
+      transform: scaleX(-100%);
     }
   }
 </style>
