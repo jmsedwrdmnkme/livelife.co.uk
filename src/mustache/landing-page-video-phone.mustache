@@ -11,24 +11,28 @@
   </div>
   <div class="bg-teal pb-5">
     <div class="container">
-      <div id="component-email">
-        <h2 class="text-center">Struggling with your mental health? <span class="d-block fw-light">Complete the form below to request a free consultation</span></h2>
-        <div class="row mt-4">
-          <div class="d-none d-lg-block col-lg-2">
-            <img class="w-100" src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/lander-email-illustration.svg" alt="">
-          </div>
-          <div class="col-12 col-lg-8">
-            <div class="ia-form"></div>
-          </div>
-          <div class="d-none d-lg-block col-lg-2">
-            <img class="w-100" src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/lander-email-illustration-2.svg" alt="">
+      <div id="component-phone">
+        <h2 class="text-center">Call us now to <strong>talk to a therapist</strong></h2>
+        <div class="card mt-3 mb-n6 p-5">
+          <div class="row">
+            <div class="d-flex pb-4 pb-lg-0 mb-4 mb-lg-0 col-lg-4 pe-lg-5 border-end align-items-center justify-content-center text-center">
+              <div>
+                <img class="img-fluid" src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/lander-email-illustration-2.svg" alt="">
+                <a href="tel:01234562345" class="text-decoration-none d-block h4 text-dark icon-telephone my-3">0123 456 23 45</a>
+                <p><span class="d-block">Everyday</span> 9.00 AM to 9.00 PM</p>
+              </div>
+            </div>
+            <div class="col-lg ps-lg-5">
+              <p>Alternatively you can leave us your details and we will give you a call back shortly</p>
+              <div class="ia-form"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="py-5">
+  <div class="py-5 mt-5">
     <div class="container">
       <h2 class="scs-title text-center">Frequently Asked <strong>Questions</strong></h2>
       <div id="listFaq" class="container accordion accordion-flush mt-4 pt-2">
@@ -100,11 +104,23 @@
     </figure>
   </div>
 
-  <div class="pt-5">
+  <div class="py-5 bg-blue-light-half mb-n5">
     <div class="container">
-      <p class="h2 text-center fw-light">Let’s get started</p>
-      <div class="row justify-content-center">
-        <div class="ia-form"></div>
+      <h2 class="h2 text-center">Call us now to <strong>talk to a therapist</strong></h2>
+      <div class="card mt-3 p-5">
+        <div class="row">
+          <div class="d-flex pb-4 pb-lg-0 mb-4 mb-lg-0 col-lg-4 pe-lg-5 border-end align-items-center justify-content-center text-center">
+            <div>
+              <img class="img-fluid" src="/_themes/[!--$SCS_THEME_NAME--]/assets/img/lander-email-illustration-2.svg" alt="">
+              <a href="tel:01234562345" class="text-decoration-none d-block h4 text-dark icon-telephone my-3">0123 456 23 45</a>
+              <p><span class="d-block">Everyday</span> 9.00 AM to 9.00 PM</p>
+            </div>
+          </div>
+          <div class="col-lg ps-lg-5">
+            <p>Alternatively you can leave us your details and we will give you a call back shortly</p>
+            <div class="ia-form"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -118,9 +134,22 @@
     --purple:       #6e72bb;
   }
 
+  /* Margins */
+  .mb-n6 {
+    margin-bottom: -6rem;
+  }
+
   /* Backgrounds */
   .bg-pink {
     background-color: var(--pink);
+  }
+
+  /* Borders */
+  @media (max-width: 1023.98px) {
+    .border-end {
+      border-right: 0 !important;
+      border-bottom: 1px solid #dee2e6 !important;
+    }
   }
 
   .bg-teal {
@@ -129,6 +158,10 @@
 
   .bg-blue-light {
     background-color: var(--blue-light);
+  }
+
+  .bg-blue-light-half {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--blue-light) 50%);
   }
 
   /* Navbar */
@@ -193,11 +226,11 @@
   }
 
   /* Cards */
-  .card {
+  .card.shadow-none {
     position: relative;
   }
 
-  .card::after {
+  .card.shadow-none::after {
     position: absolute;
     content: '';
     top: -1px;
@@ -207,13 +240,13 @@
   }
 
   @media (max-width: 1023.98px) {
-    .card::after {
+    .card.shadow-none::after {
       right: calc(100% - 3px );
     }
   }
 
   @media (min-width: 1024px) {
-    .card::after {
+    .card.shadow-none::after {
       left: calc(100% - 3px );
     }
   }
@@ -242,6 +275,10 @@
     background-color: transparent !important;
   }
 
+  .opa-interview > div > div {
+    padding: 0 !important;
+  }
+
   .opa-submit {
     margin: 0 auto !important;
   }
@@ -249,7 +286,7 @@
 
 <script>
   // IA form name
-  var iaDeploymentName = "Livelife Contact Us Email";
+  var iaDeploymentName = "Livelife Contact Us Phone";
 </script>
 
 {{> ./partials/footer-lander.mustache }}
