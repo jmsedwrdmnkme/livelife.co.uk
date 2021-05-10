@@ -124,5 +124,14 @@ window.onload = function() {
 // Onboarding piece load
 var el = document.getElementById("onboarding");
 var webDeterminationsUrl = "https://tp-opa--tst2.custhelp.com/web-determinations";
-var deploymentName = "Livelife Contact Us plus Assessment1 Rev2";
+var deploymentName = "Livelife Contact Us plus Assessment1 Rev3";
 OraclePolicyAutomationInterview.StartInterview(el, webDeterminationsUrl, deploymentName);
+
+// IA load
+var iaForm = document.querySelectorAll(".ia-form");
+
+if (iaForm != null) {
+  iaForm.forEach(function (item, index) {
+    OraclePolicyAutomationInterview.StartInterview(item, webDeterminationsUrl, iaDeploymentName);
+  });
+}

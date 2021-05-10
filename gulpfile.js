@@ -15,7 +15,6 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const sasslint = require('gulp-sass-lint');
 const ext = require('gulp-ext-replace');
-const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const mustache = require("gulp-mustache");
@@ -39,8 +38,7 @@ function clean() {
 function javascript() {
   gulp
     .src([
-      './src/js/scripts.js',
-      './gulpfile.babel.js'
+      './src/js/scripts.js'
     ], { allowEmpty: true })
     .pipe(jshint())
     .pipe(jshint.reporter(stylish));
@@ -50,11 +48,6 @@ function javascript() {
       'node_modules/bootstrap/dist/js/bootstrap.js',
       './src/js/scripts.js'
     ], { allowEmpty: true })
-    .pipe(
-      babel({
-        presets: ['@babel/env'],
-      })
-    )
     .pipe(uglify({
       mangle: true,
       compress: {
