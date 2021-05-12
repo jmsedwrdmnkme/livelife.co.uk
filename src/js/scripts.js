@@ -127,6 +127,35 @@ var webDeterminationsUrl = "https://tp-opa--tst2.custhelp.com/web-determinations
 var deploymentName = "Livelife Contact Us plus Assessment1 Rev3";
 OraclePolicyAutomationInterview.StartInterview(el, webDeterminationsUrl, deploymentName);
 
+// Onboarding modal button functionality
+var modalWait = new MutationObserver(function (mutations, me) {
+  var links = document.querySelector('a[href*="#onboardingModal"]');
+  if (links) {
+    setTimeout(() => {
+      modalHandle(links); 
+    }, 200);
+
+    me.disconnect();
+    return;
+  }
+});
+
+modalWait.observe(document, {
+  childList: true,
+  subtree: true
+});
+
+function modalHandle(modalWait) { 
+  var onboardingBtns = document.querySelectorAll('a[href*="#onboardingModal"]');
+
+  onboardingBtns.forEach(function (item) {
+    item.setAttribute('data-bs-toggle', 'modal');
+    item.setAttribute('data-bs-target', '#onboardingModal');
+    item.setAttribute('type', 'button');
+    item.removeAttribute('href');
+  });
+}
+
 // IA load
 var iaForm = document.querySelectorAll(".ia-form");
 
