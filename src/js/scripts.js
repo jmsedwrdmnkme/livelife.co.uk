@@ -163,4 +163,8 @@ if (iaForm != null) {
   iaForm.forEach(function (item, index) {
     OraclePolicyAutomationInterview.StartInterview(item, webDeterminationsUrl, iaDeploymentName);
   });
+
+  window.onload = function () {
+    window.scrollTo(0,0);
+  };
 }
