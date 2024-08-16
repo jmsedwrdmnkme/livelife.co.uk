@@ -9,7 +9,7 @@ Will play nice with the latest versions of modern browsers:-
 * Safari
 
 ## Get started
-* git clone https://git.jamesmonk.me/james/livelife.co.uk.git
+* git clone https://github.com/jmsedwrdmnkme/livelife.co.uk.git
 * cd livelife.co.uk
 * npm install --save-dev
 * gulp
